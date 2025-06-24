@@ -12,8 +12,15 @@ const AnimatedCounter = ({
 }) => {
   const [count, setCount] = useState(0)
   const ref = useRef<HTMLSpanElement>(null)
+  const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  useEffect(() => {
+    if (!isMounted) return;
+
     const node = ref.current
     if (!node) return
 
@@ -50,11 +57,11 @@ const AnimatedCounter = ({
     return () => {
       observer.disconnect()
     }
-  }, [value])
+  }, [value, isMounted])
 
   return (
     <span ref={ref} className="text-4xl md:text-5xl font-bold text-primary">
-      {new Intl.NumberFormat('es-PE').format(count)}
+      {isMounted ? new Intl.NumberFormat('es-PE').format(count) : 0}
       {suffix}
     </span>
   )
