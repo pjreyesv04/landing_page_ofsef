@@ -46,7 +46,7 @@ const Contact = () => {
         src="https://images.unsplash.com/photo-1587560418329-a5b163e74828?q=80&w=1974&auto=format&fit=crop"
         alt="Agentes de call center"
         fill
-        className="object-cover"
+        className="object-cover -z-10"
         data-ai-hint="call center agents"
       />
       <div className="absolute inset-0 bg-background/90"></div>

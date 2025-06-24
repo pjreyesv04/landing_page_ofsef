@@ -30,7 +30,7 @@ const Hero = () => {
           src="https://images.unsplash.com/photo-1593078942735-a89b0a0a5b06?q=80&w=2070&auto=format&fit=crop"
           alt="Familia unida y protegida"
           fill
-          className="object-cover"
+          className="object-cover -z-10"
           data-ai-hint="protected family"
           priority
         />
