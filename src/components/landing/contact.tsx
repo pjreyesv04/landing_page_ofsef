@@ -46,10 +46,10 @@ const Contact = () => {
         src="https://placehold.co/1920x1080.png"
         alt="Agentes de call center"
         fill
-        className="object-cover -z-10"
+        className="object-cover"
         data-ai-hint="call center agents"
       />
-      <div className="absolute inset-0 bg-background/90 -z-10"></div>
+      <div className="absolute inset-0 bg-background/90"></div>
       <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12">
             <div className="space-y-6">
