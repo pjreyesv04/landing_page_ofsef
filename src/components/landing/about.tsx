@@ -6,7 +6,6 @@ import Link from 'next/link';
 const features = [
   "Gestionamos tu afiliación al Seguro Integral de Salud (SIS).",
   "Brindamos soporte para las coberturas de alto costo de FISSAL.",
-  "Orientación sobre la activación del SOAT en caso de accidentes.",
   "Somos el nexo oficial con las Instituciones Administradoras de Fondos de Aseguramiento en Salud (IAFAS).",
   "Comprometidos con el acceso universal a la salud, como parte del Ministerio de Salud."
 ];
@@ -38,7 +37,7 @@ const About = () => {
               Tu Puente hacia el Bienestar y la Salud
             </h2>
             <p className="text-muted-foreground text-lg">
-              La Oficina de Seguros de la Dirección de Redes Integradas de Salud (DIRIS) de Lima Norte, es una entidad del Ministerio de Salud. Nuestra misión es garantizar el acceso de la población a la protección financiera en salud, gestionando la afiliación y el uso de las coberturas del Seguro Integral de Salud (SIS), el Fondo Intangible Solidario en Salud (FISSAL) y el Seguro Obligatorio de Accidentes de Tránsito (SOAT).
+              La Oficina de Seguros de la Dirección de Redes Integradas de Salud (DIRIS) de Lima Norte, es una entidad del Ministerio de Salud. Nuestra misión es garantizar el acceso de la población a la protección financiera en salud, gestionando la afiliación y el uso de las coberturas del Seguro Integral de Salud (SIS) y el Fondo Intangible Solidario en Salud (FISSAL).
             </p>
             <ul className="space-y-4">
               {features.map((feature, i) => (

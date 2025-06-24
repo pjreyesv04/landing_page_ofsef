@@ -44,7 +44,7 @@ const Hero = () => {
                 Garantizando tu Acceso al Seguro Integral de Salud en Lima Norte
               </h1>
               <p className="text-lg text-primary-foreground/80">
-                Somos la Oficina de Seguros de la DIRIS Lima Norte, tu nexo con el SIS, FISSAL y el SOAT. Facilitamos tu afiliación y te brindamos el soporte que necesitas.
+                Somos la Oficina de Seguros de la DIRIS Lima Norte, tu nexo con el SIS y FISSAL. Facilitamos tu afiliación y te brindamos el soporte que necesitas.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button asChild size="lg" className="font-semibold bg-accent text-accent-foreground hover:bg-accent/90">
