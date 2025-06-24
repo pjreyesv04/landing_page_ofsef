@@ -1,5 +1,5 @@
 import { Card, CardContent } from '@/components/ui/card';
-import { Stethoscope, Bed, Smile, Baby, FlaskConical, Ambulance, CheckCircle, ShieldQuestion } from 'lucide-react';
+import { Stethoscope, Bed, Smile, Baby, FlaskConical, Ambulance, CheckCircle2, ShieldQuestion } from 'lucide-react';
 import Image from 'next/image';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 
@@ -88,7 +88,7 @@ const Services = () => {
                     <ul className="space-y-3">
                         {whyChooseUsFeatures.map((feature, i) => (
                             <li key={i} className="flex items-center gap-3">
-                            <CheckCircle className="h-5 w-5 text-accent" />
+                            <CheckCircle2 className="h-5 w-5 text-accent" />
                             <span className="text-foreground/80 font-medium">{feature}</span>
                             </li>
                         ))}
