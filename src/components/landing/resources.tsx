@@ -1,62 +1,69 @@
-import Image from 'next/image';
 import { Button } from '@/components/ui/button';
-import { CheckCircle2, ShieldCheck } from 'lucide-react';
-import Link from 'next/link';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Download, FileText } from 'lucide-react';
 
-const features = [
-  "Gestionamos tu afiliación al Seguro Integral de Salud (SIS).",
-  "Brindamos soporte para las coberturas de alto costo de FISSAL.",
-  "Orientación sobre la activación del SOAT en caso de accidentes.",
-  "Somos el nexo oficial con las Instituciones Administradoras de Fondos de Aseguramiento en Salud (IAFAS).",
-  "Comprometidos con el acceso universal a la salud, como parte del Ministerio de Salud."
+const documents = [
+  {
+    icon: <FileText className="h-8 w-8 text-primary" />,
+    title: 'RJ de Afiliación',
+    description: 'Documento oficial para el proceso de afiliación al SIS.',
+    link: '#',
+  },
+  {
+    icon: <FileText className="h-8 w-8 text-primary" />,
+    title: 'RJ de Sepelios',
+    description: 'Formatos necesarios para la solicitud de cobertura por sepelio.',
+    link: '#',
+  },
+  {
+    icon: <FileText className="h-8 w-8 text-primary" />,
+    title: 'Guía de Cobertura FISSAL',
+    description: 'Información detallada sobre las enfermedades de alto costo cubiertas.',
+    link: '#',
+  },
+  {
+    icon: <FileText className="h-8 w-8 text-primary" />,
+    title: 'Otros Formatos',
+    description: 'Descargue otros formatos y guías relevantes para sus trámites.',
+    link: '#',
+  }
 ];
 
-const About = () => {
+const Resources = () => {
   return (
-    <section id="sobre-nosotros" className="py-20 bg-card">
+    <section id="recursos" className="py-20 bg-background">
       <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="relative">
-            <Image
-              src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=2070&auto=format&fit=crop"
-              alt="Equipo de la Oficina de Seguros de DIRIS Lima Norte"
-              width={600}
-              height={700}
-              className="rounded-lg shadow-2xl object-cover w-full h-full"
-              data-ai-hint="medical team discussion"
-            />
-            <div className="absolute -bottom-8 -left-8 bg-primary text-primary-foreground p-8 rounded-lg shadow-lg flex items-center gap-4">
-              <ShieldCheck className="h-16 w-16" />
-              <div>
-                <p className="font-bold text-4xl">MINSA</p>
-                <p>Respaldo del Estado</p>
+        <div className="text-center space-y-4 mb-12">
+          <p className="font-semibold text-primary">CENTRO DE RECURSOS</p>
+          <h2 className="text-3xl md:text-4xl font-bold font-headline">Documentos y Formatos a tu Disposición</h2>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            Descargue los documentos, formatos y guías necesarios para gestionar sus trámites de manera rápida y sencilla.
+          </p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {documents.map((doc) => (
+            <Card key={doc.title} className="flex flex-col text-center items-center p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <div className="bg-primary/10 p-4 rounded-full mb-4">
+                {doc.icon}
               </div>
-            </div>
-          </div>
-          <div className="space-y-6">
-            <p className="font-semibold text-primary">SOBRE NOSOTROS</p>
-            <h2 className="text-3xl md:text-4xl font-bold font-headline">
-              Tu Puente hacia el Bienestar y la Salud
-            </h2>
-            <p className="text-muted-foreground text-lg">
-              La Oficina de Seguros de la Dirección de Redes Integradas de Salud (DIRIS) de Lima Norte, es una entidad del Ministerio de Salud. Nuestra misión es garantizar el acceso de la población a la protección financiera en salud, gestionando la afiliación y el uso de las coberturas del Seguro Integral de Salud (SIS), el Fondo Intangible Solidario en Salud (FISSAL) y el Seguro Obligatorio de Accidentes de Tránsito (SOAT).
-            </p>
-            <ul className="space-y-4">
-              {features.map((feature, i) => (
-                <li key={i} className="flex items-start gap-3">
-                  <CheckCircle2 className="h-6 w-6 text-accent shrink-0 mt-1" />
-                  <span className="text-foreground/80">{feature}</span>
-                </li>
-              ))}
-            </ul>
-            <Button asChild size="lg" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
-              <Link href="#contacto">Contáctenos</Link>
-            </Button>
-          </div>
+              <CardHeader className="p-0">
+                <CardTitle className="text-lg font-semibold">{doc.title}</CardTitle>
+              </CardHeader>
+              <CardContent className="p-4 flex-grow">
+                <CardDescription>{doc.description}</CardDescription>
+              </CardContent>
+              <Button asChild className="w-full mt-auto bg-accent hover:bg-accent/90">
+                <a href={doc.link} download>
+                  <Download className="mr-2 h-4 w-4" />
+                  Descargar
+                </a>
+              </Button>
+            </Card>
+          ))}
         </div>
       </div>
     </section>
   );
 };
 
-export default About;
+export default Resources;
