@@ -1,24 +1,24 @@
 import Image from 'next/image';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
-import { HeartHandshake, BookUser, ShieldPlus, ArrowRight } from 'lucide-react';
+import { Goal, Eye, Gem, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 import { Button } from '../ui/button';
 
 const featureCards = [
   {
-    icon: <HeartHandshake className="h-10 w-10 text-primary" />,
-    title: "Coberturas Gratuitas",
-    description: "Acceso a seguros de salud financiados por el estado para tu tranquilidad."
+    icon: <Goal className="h-10 w-10 text-primary" />,
+    title: "Nuestra Misión",
+    description: "Garantizar el acceso universal y equitativo a los seguros de salud para toda la población de Lima Norte."
   },
   {
-    icon: <BookUser className="h-10 w-10 text-primary" />,
-    title: "Asesoría Experta",
-    description: "Te guiamos en cada paso del proceso de afiliación y uso de tu seguro."
+    icon: <Eye className="h-10 w-10 text-primary" />,
+    title: "Nuestra Visión",
+    description: "Ser la oficina líder y referente en la gestión de seguros de salud, reconocida por su eficiencia y compromiso."
   },
   {
-    icon: <ShieldPlus className="h-10 w-10 text-primary" />,
-    title: "Soporte Continuo",
-    description: "Estamos contigo para resolver tus dudas y facilitar tus trámites."
+    icon: <Gem className="h-10 w-10 text-primary" />,
+    title: "Nuestros Valores",
+    description: "Actuamos con Integridad, Transparencia, Compromiso, Equidad y vocación de Servicio hacia la comunidad."
   }
 ];
 
