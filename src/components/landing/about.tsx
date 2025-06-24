@@ -16,13 +16,12 @@ const About = () => {
     <section id="sobre-nosotros" className="py-20 bg-card">
       <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="relative">
+          <div className="relative aspect-[6/7]">
             <Image
               src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=2070&auto=format&fit=crop"
               alt="Equipo de la Oficina de Seguros de DIRIS Lima Norte"
-              width={600}
-              height={700}
-              className="rounded-lg shadow-2xl object-cover w-full h-full"
+              fill
+              className="rounded-lg shadow-2xl object-cover"
               data-ai-hint="medical team discussion"
             />
             <div className="absolute -bottom-8 -left-8 bg-primary text-primary-foreground p-8 rounded-lg shadow-lg flex items-center gap-4">

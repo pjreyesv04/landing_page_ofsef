@@ -45,13 +45,13 @@ const Announcements = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {announcements.map((item) => (
             <Card key={item.title} className="flex flex-col overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 group">
-              <div className="overflow-hidden">
+              <div className="relative h-56 overflow-hidden">
                 <Image 
                   src={item.image}
                   alt={item.title}
-                  width={600}
-                  height={400}
-                  className="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   data-ai-hint={item.hint}
                 />
               </div>

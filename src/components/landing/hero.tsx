@@ -26,11 +26,14 @@ const Hero = () => {
   return (
     <>
       <section className="relative bg-background pt-24 pb-32">
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1541019623835-9515934a3628?q=80&w=2070&auto=format&fit=crop')" }}
+        <Image
+          src="https://images.unsplash.com/photo-1541019623835-9515934a3628?q=80&w=2070&auto=format&fit=crop"
+          alt="Familia feliz"
+          fill
+          className="object-cover"
           data-ai-hint="happy family"
-        ></div>
+          priority
+        />
         <div className="absolute inset-0 bg-primary/80"></div>
 
         <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">

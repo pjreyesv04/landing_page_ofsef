@@ -114,13 +114,12 @@ const Services = () => {
                         </AccordionItem>
                     </Accordion>
                 </div>
-                 <div className="relative">
+                 <div className="relative aspect-[6/7]">
                     <Image
                     src="https://images.unsplash.com/photo-1622253692010-33352da603d7?q=80&w=1964&auto=format&fit=crop"
                     alt="Doctora sonriendo"
-                    width={600}
-                    height={700}
-                    className="rounded-lg shadow-2xl object-cover w-full h-full"
+                    fill
+                    className="rounded-lg shadow-2xl object-cover"
                     data-ai-hint="smiling doctor"
                     />
                     <div className="absolute top-8 -right-8 bg-white p-6 rounded-lg shadow-lg max-w-xs text-center">

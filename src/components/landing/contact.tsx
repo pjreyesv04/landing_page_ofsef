@@ -11,6 +11,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { ArrowRight } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import Image from 'next/image';
 
 const formSchema = z.object({
   name: z.string().min(2, { message: "El nombre es requerido." }),
@@ -39,10 +40,15 @@ const Contact = () => {
   return (
     <section 
       id="contacto" 
-      className="py-24 bg-cover bg-center relative"
-      style={{ backgroundImage: "url('https://images.unsplash.com/photo-1587560418329-a5b163e74828?q=80&w=1974&auto=format&fit=crop')" }}
-      data-ai-hint="call center agents"
+      className="py-24 relative"
     >
+      <Image
+        src="https://images.unsplash.com/photo-1587560418329-a5b163e74828?q=80&w=1974&auto=format&fit=crop"
+        alt="Agentes de call center"
+        fill
+        className="object-cover"
+        data-ai-hint="call center agents"
+      />
       <div className="absolute inset-0 bg-background/90"></div>
       <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12">
@@ -63,7 +69,7 @@ const Contact = () => {
                 </div>
             </div>
             <div>
-                 <Card className="p-8 shadow-2xl">
+                 <Card className="p-8 shadow-2xl bg-card/80 backdrop-blur-sm">
                     <CardHeader className="p-0 mb-6">
                         <CardTitle className="text-2xl font-headline">Envíenos un Mensaje</CardTitle>
                     </CardHeader>
