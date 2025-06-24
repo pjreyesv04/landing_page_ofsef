@@ -17,7 +17,7 @@ const About = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="relative aspect-[6/7]">
             <Image
-              src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=2070&auto=format&fit=crop"
+              src="https://placehold.co/600x700.png"
               alt="Equipo de la Oficina de Seguros de DIRIS Lima Norte"
               fill
               className="rounded-lg shadow-2xl object-cover"

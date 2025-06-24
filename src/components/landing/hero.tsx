@@ -27,14 +27,14 @@ const Hero = () => {
     <>
       <section className="relative pt-24 pb-32">
         <Image
-          src="https://images.unsplash.com/photo-1593078942735-a89b0a0a5b06?q=80&w=2070&auto=format&fit=crop"
+          src="https://placehold.co/1920x1080.png"
           alt="Familia unida y protegida"
           fill
           className="object-cover -z-10"
           data-ai-hint="protected family"
           priority
         />
-        <div className="absolute inset-0 bg-primary/80"></div>
+        <div className="absolute inset-0 bg-primary/80 -z-10"></div>
 
         <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid md:grid-cols-2 gap-16 items-center">

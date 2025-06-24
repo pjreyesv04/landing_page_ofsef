@@ -10,7 +10,7 @@ const announcements = [
     author: 'DIRIS LN',
     title: 'Nueva campaña de vacunación contra la influenza estacional.',
     category: 'Campaña',
-    image: 'https://images.unsplash.com/photo-1607619056574-7d8d3ee536b2?q=80&w=2127&auto=format&fit=crop',
+    image: 'https://placehold.co/400x224.png',
     hint: 'vaccination campaign'
   },
   {
@@ -18,7 +18,7 @@ const announcements = [
     author: 'Oficina de Seguros',
     title: 'Actualización de la red de Establecimientos de salud afiliados en Comas.',
     category: 'Actualización',
-    image: 'https://images.unsplash.com/photo-16166422646299-444368815a20?q=80&w=1974&auto=format&fit=crop',
+    image: 'https://placehold.co/400x224.png',
     hint: 'health facility'
   },
   {
@@ -26,7 +26,7 @@ const announcements = [
     author: 'Prevención',
     title: 'Charla informativa sobre prevención de enfermedades crónicas.',
     category: 'Evento',
-    image: 'https://images.unsplash.com/photo-1556761175-b413da4baf72?q=80&w=1974&auto=format&fit=crop',
+    image: 'https://placehold.co/400x224.png',
     hint: 'health talk'
   }
 ];
