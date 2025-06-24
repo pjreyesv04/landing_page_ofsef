@@ -9,7 +9,7 @@ import { useState } from 'react';
 const navLinks = [
   { href: '#sobre-nosotros', label: 'Sobre Nosotros' },
   { href: '#servicios', label: 'Servicios' },
-  { href: '#coberturas', label: 'Coberturas' },
+  { href: '#planes', label: 'Planes SIS' },
   { href: '#recursos', label: 'Recursos' },
   { href: '#anuncios', label: 'Anuncios' },
   { href: '#contacto', label: 'Contacto' },
