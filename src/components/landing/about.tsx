@@ -26,8 +26,8 @@ const About = () => {
             <div className="absolute -bottom-8 -left-8 bg-primary text-primary-foreground p-8 rounded-lg shadow-lg flex items-center gap-4">
               <ShieldCheck className="h-16 w-16" />
               <div>
-                <p className="font-bold text-4xl">MINSA</p>
-                <p>Respaldo del Estado</p>
+                <p className="font-bold text-4xl">DIRIS LN</p>
+                <p>Oficina de Seguros</p>
               </div>
             </div>
           </div>

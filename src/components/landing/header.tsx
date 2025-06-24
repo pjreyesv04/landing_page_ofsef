@@ -55,7 +55,7 @@ const Header = () => {
       <div className="container mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link href="/" className="flex items-center gap-2">
           <ShieldCheck className="h-8 w-8 text-primary" />
-          <span className="font-bold text-xl text-primary font-headline">Redes Seguras</span>
+          <span className="font-bold text-xl text-primary font-headline">Oficina de Seguros</span>
         </Link>
 
         <nav className="hidden lg:flex items-center gap-8">
@@ -82,7 +82,7 @@ const Header = () => {
                 <div className="flex flex-col gap-6 p-6">
                     <Link href="/" className="flex items-center gap-2 mb-4" onClick={() => setMenuOpen(false)}>
                     <ShieldCheck className="h-8 w-8 text-primary" />
-                    <span className="font-bold text-lg text-primary font-headline">Redes Seguras</span>
+                    <span className="font-bold text-lg text-primary font-headline">Oficina de Seguros</span>
                     </Link>
                     {navLinks.map((link) => (
                     <Link key={link.href} href={link.href} className="text-lg font-medium" onClick={() => setMenuOpen(false)}>

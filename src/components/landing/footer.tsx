@@ -13,7 +13,7 @@ const Footer = () => {
           <div className="space-y-4">
             <Link href="/" className="flex items-center gap-2">
               <ShieldCheck className="h-8 w-8 text-accent" />
-              <span className="font-bold text-xl text-white font-headline">Redes Seguras</span>
+              <span className="font-bold text-xl text-white font-headline">Oficina de Seguros</span>
             </Link>
             <p className="text-sm">
               Gestionando el acceso al Seguro Integral de Salud (SIS) y otras coberturas para la comunidad de Lima Norte, bajo el respaldo del Ministerio de Salud.

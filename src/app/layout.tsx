@@ -3,7 +3,7 @@ import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
 
 export const metadata: Metadata = {
-  title: 'Redes Seguras | DIRIS Lima Norte',
+  title: 'Oficina de Seguros | DIRIS Lima Norte',
   description: 'Oficina de Seguros de la DIRIS Lima Norte. Facilitamos el acceso al Seguro Integral de Salud (SIS) y FISSAL para la comunidad de Lima Norte.',
 };
 
