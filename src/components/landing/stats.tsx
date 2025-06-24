@@ -166,8 +166,7 @@ const Stats = () => {
                   <CartesianGrid vertical={false} />
                   <XAxis dataKey="month" tickLine={false} axisLine={false} tickMargin={8} fontSize={12} />
                   <YAxis tickFormatter={(value) => `${value}%`} />
-                  <ChartTooltip formatter={(value) => [`${value}%`, "Avance"]}
-                  />
+                  <ChartTooltip content={<ChartTooltipContent />} />
                   <Bar dataKey="avance" fill="var(--color-avance)" radius={4} />
                 </BarChart>
               </ChartContainer>
