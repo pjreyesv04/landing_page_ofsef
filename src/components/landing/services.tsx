@@ -37,9 +37,9 @@ const services = [
 ];
 
 const whyChooseUsFeatures = [
-    "Experiencia y Respaldo del Estado",
-    "Red de Salud Propia y Confiable",
-    "Planes a la Medida de la Comunidad",
+    "Respaldo y Experiencia del Ministerio de Salud",
+    "Acceso a la Red de Salud de la DIRIS Lima Norte",
+    "Coberturas de Salud Gratuitas y Solidarias",
     "Atención Centrada en el Afiliado",
 ];
 
@@ -83,7 +83,7 @@ const Services = () => {
                         Comprometidos con la Calidad y su Confianza
                     </h2>
                     <p className="text-muted-foreground text-lg">
-                        Entendemos la importancia de un seguro de salud confiable. Por eso, combinamos nuestra experiencia con un profundo compromiso con el bienestar de la comunidad de Lima Norte.
+                        Entendemos la importancia de un seguro de salud confiable. Por eso, combinamos nuestra experiencia como parte del Ministerio de Salud con un profundo compromiso con el bienestar de la comunidad de Lima Norte.
                     </p>
                     <ul className="space-y-3">
                         {whyChooseUsFeatures.map((feature, i) => (
@@ -95,9 +95,9 @@ const Services = () => {
                     </ul>
                     <Accordion type="single" collapsible className="w-full">
                         <AccordionItem value="item-1">
-                            <AccordionTrigger className="font-semibold text-lg">¿Cómo me afilio a un plan?</AccordionTrigger>
+                            <AccordionTrigger className="font-semibold text-lg">¿Cómo me afilio al SIS?</AccordionTrigger>
                             <AccordionContent>
-                            El proceso es sencillo. Puede acercarse a nuestras oficinas, contactarnos por teléfono o iniciar el proceso a través de nuestro formulario de cotización en línea. Nuestro equipo lo guiará en cada paso.
+                            El proceso es sencillo. Puede acercarse a nuestras oficinas, contactarnos por teléfono o iniciar el proceso a través de nuestro formulario de contacto. Nuestro equipo lo guiará en cada paso.
                             </AccordionContent>
                         </AccordionItem>
                         <AccordionItem value="item-2">
@@ -107,9 +107,9 @@ const Services = () => {
                             </AccordionContent>
                         </AccordionItem>
                         <AccordionItem value="item-3">
-                            <AccordionTrigger className="font-semibold text-lg">¿Cómo presento un reclamo?</AccordionTrigger>
+                            <AccordionTrigger className="font-semibold text-lg">¿Cómo uso mi cobertura FISSAL?</AccordionTrigger>
                             <AccordionContent>
-                            Para presentar un reclamo o solicitar un reembolso, puede descargar el formulario desde nuestra sección de recursos o solicitarlo en nuestras oficinas. Nuestro equipo de atención al afiliado está listo para asistirlo.
+                            Para activar su cobertura de alto costo a través de FISSAL, su médico tratante en un establecimiento de salud público debe emitir el diagnóstico. Nosotros le orientamos en todo el proceso administrativo.
                             </AccordionContent>
                         </AccordionItem>
                     </Accordion>

@@ -16,7 +16,7 @@ const Footer = () => {
               <span className="font-bold text-xl text-white font-headline">Redes Seguras</span>
             </Link>
             <p className="text-sm">
-              Oficina de Seguros de la DIRIS Lima Norte, comprometidos con su bienestar y el de su familia.
+              Gestionando el acceso al Seguro Integral de Salud (SIS) y otras coberturas para la comunidad de Lima Norte, bajo el respaldo del Ministerio de Salud.
             </p>
              <div className="flex gap-4 pt-2">
               <Link href="#" className="text-slate-400 hover:text-white transition-colors" aria-label="Twitter">
@@ -36,7 +36,7 @@ const Footer = () => {
             <ul className="space-y-2 text-sm">
               <li><Link href="#sobre-nosotros" className="hover:text-white">Sobre Nosotros</Link></li>
               <li><Link href="#servicios" className="hover:text-white">Servicios</Link></li>
-              <li><Link href="#planes" className="hover:text-white">Planes</Link></li>
+              <li><Link href="#coberturas" className="hover:text-white">Coberturas</Link></li>
               <li><Link href="#anuncios" className="hover:text-white">Anuncios</Link></li>
               <li><Link href="#contacto" className="hover:text-white">Contacto</Link></li>
             </ul>

@@ -7,18 +7,18 @@ import { Button } from '../ui/button';
 const featureCards = [
   {
     icon: <HeartHandshake className="h-10 w-10 text-primary" />,
-    title: "Planes Flexibles",
-    description: "Seguros diseñados para adaptarse a sus necesidades y presupuesto."
+    title: "Coberturas Gratuitas",
+    description: "Acceso a seguros de salud financiados por el estado para tu tranquilidad."
   },
   {
     icon: <BookUser className="h-10 w-10 text-primary" />,
     title: "Asesoría Experta",
-    description: "Nuestro equipo le guiará para que elija la mejor cobertura."
+    description: "Te guiamos en cada paso del proceso de afiliación y uso de tu seguro."
   },
   {
     icon: <ShieldPlus className="h-10 w-10 text-primary" />,
     title: "Soporte Continuo",
-    description: "Estamos con usted en cada paso, desde la afiliación hasta los reclamos."
+    description: "Estamos contigo para resolver tus dudas y facilitar tus trámites."
   }
 ];
 
@@ -36,16 +36,16 @@ const Hero = () => {
         <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div className="text-white space-y-6">
-              <p className="font-semibold text-accent bg-accent/20 px-4 py-1 rounded-full inline-block">SU BIENESTAR, NUESTRA PRIORIDAD</p>
+              <p className="font-semibold text-accent bg-accent/20 px-4 py-1 rounded-full inline-block">TU BIENESTAR, NUESTRA PRIORIDAD</p>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight font-headline">
-                Protegiendo la Salud de las Familias de Lima Norte
+                Garantizando tu Acceso al Seguro Integral de Salud en Lima Norte
               </h1>
               <p className="text-lg text-primary-foreground/80">
-                Ofrecemos seguros de salud confiables y accesibles. Encuentre el plan perfecto para usted y su familia hoy mismo.
+                Somos la Oficina de Seguros de la DIRIS Lima Norte, tu nexo con el SIS, FISSAL y el SOAT. Facilitamos tu afiliación y te brindamos el soporte que necesitas.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button asChild size="lg" className="font-semibold bg-accent text-accent-foreground hover:bg-accent/90">
-                  <Link href="#planes">Ver Planes <ArrowRight className="ml-2 h-5 w-5"/></Link>
+                  <Link href="#coberturas">Conoce las Coberturas <ArrowRight className="ml-2 h-5 w-5"/></Link>
                 </Button>
                 <Button asChild size="lg" variant="outline" className="font-semibold text-white border-white hover:bg-white hover:text-primary">
                   <Link href="#sobre-nosotros">Saber Más</Link>

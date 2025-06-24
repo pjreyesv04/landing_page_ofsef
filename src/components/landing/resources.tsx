@@ -4,11 +4,11 @@ import { CheckCircle2, ShieldCheck } from 'lucide-react';
 import Link from 'next/link';
 
 const features = [
-  "Acceso a una amplia red de proveedores de salud.",
-  "Planes de salud completos y asequibles.",
-  "Equipo dedicado al servicio de la comunidad.",
-  "Procesos de afiliación y reclamos simplificados.",
-  "Compromiso con la atención preventiva y el bienestar."
+  "Gestionamos tu afiliación al Seguro Integral de Salud (SIS).",
+  "Brindamos soporte para las coberturas de alto costo de FISSAL.",
+  "Orientación sobre la activación del SOAT en caso de accidentes.",
+  "Somos el nexo oficial con las Instituciones Administradoras de Fondos de Aseguramiento en Salud (IAFAS).",
+  "Comprometidos con el acceso universal a la salud, como parte del Ministerio de Salud."
 ];
 
 const About = () => {
@@ -28,18 +28,18 @@ const About = () => {
             <div className="absolute -bottom-8 -left-8 bg-primary text-primary-foreground p-8 rounded-lg shadow-lg flex items-center gap-4">
               <ShieldCheck className="h-16 w-16" />
               <div>
-                <p className="font-bold text-4xl">20+</p>
-                <p>Años de Experiencia</p>
+                <p className="font-bold text-4xl">MINSA</p>
+                <p>Respaldo del Estado</p>
               </div>
             </div>
           </div>
           <div className="space-y-6">
             <p className="font-semibold text-primary">SOBRE NOSOTROS</p>
             <h2 className="text-3xl md:text-4xl font-bold font-headline">
-              Su Aliado Estratégico en Salud para Lima Norte
+              Tu Puente hacia el Bienestar y la Salud
             </h2>
             <p className="text-muted-foreground text-lg">
-              Somos la Oficina de Seguros de la Dirección de Redes Integradas de Salud de Lima Norte, una entidad pública dedicada a facilitar el acceso a servicios de salud de calidad para todos los residentes de nuestra jurisdicción.
+              La Oficina de Seguros de la Dirección de Redes Integradas de Salud (DIRIS) de Lima Norte, es una entidad del Ministerio de Salud. Nuestra misión es garantizar el acceso de la población a la protección financiera en salud, gestionando la afiliación y el uso de las coberturas del Seguro Integral de Salud (SIS), el Fondo Intangible Solidario en Salud (FISSAL) y el Seguro Obligatorio de Accidentes de Tránsito (SOAT).
             </p>
             <ul className="space-y-4">
               {features.map((feature, i) => (
