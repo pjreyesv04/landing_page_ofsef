@@ -35,11 +35,13 @@ const Footer = () => {
             <h3 className="font-semibold text-lg text-white">Enlaces Rápidos</h3>
             <ul className="space-y-2 text-sm">
               <li><Link href="#sobre-nosotros" className="hover:text-white">Sobre Nosotros</Link></li>
-              <li><Link href="#servicios" className="hover:text-white">Servicios</Link></li>
+              <li><Link href="#estadisticas" className="hover:text-white">Nuestras Cifras</Link></li>
+              <li><Link href="#servicios" className="hover:text-white">Nuestros Servicios</Link></li>
+              <li><Link href="#porque-elegirnos" className="hover:text-white">Nuestro Compromiso</Link></li>
               <li><Link href="#planes" className="hover:text-white">Planes SIS</Link></li>
               <li><Link href="#recursos" className="hover:text-white">Recursos</Link></li>
               <li><Link href="#anuncios" className="hover:text-white">Anuncios</Link></li>
-              <li><Link href="#contacto" className="hover:text-white">Contacto</Link></li>
+              <li><Link href="#contacto" className="hover:text-white">Contáctenos</Link></li>
             </ul>
           </div>
 

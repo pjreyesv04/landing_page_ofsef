@@ -78,7 +78,7 @@ const Services = () => {
         <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="grid md:grid-cols-2 gap-12 items-center">
                 <div className="space-y-6">
-                    <p className="font-semibold text-primary">POR QUÉ ELEGIRNOS</p>
+                    <p className="font-semibold text-primary">NUESTRO COMPROMISO</p>
                     <h2 className="text-3xl md:text-4xl font-bold font-headline">
                         Comprometidos con la Calidad y su Confianza
                     </h2>

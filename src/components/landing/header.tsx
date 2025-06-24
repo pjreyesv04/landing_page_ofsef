@@ -8,11 +8,13 @@ import { useState } from 'react';
 
 const navLinks = [
   { href: '#sobre-nosotros', label: 'Sobre Nosotros' },
-  { href: '#servicios', label: 'Servicios' },
+  { href: '#estadisticas', label: 'Nuestras Cifras' },
+  { href: '#servicios', label: 'Nuestros Servicios' },
+  { href: '#porque-elegirnos', label: 'Nuestro Compromiso' },
   { href: '#planes', label: 'Planes SIS' },
   { href: '#recursos', label: 'Recursos' },
   { href: '#anuncios', label: 'Anuncios' },
-  { href: '#contacto', label: 'Contacto' },
+  { href: '#contacto', label: 'Contáctenos' },
 ];
 
 const Header = () => {
