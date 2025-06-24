@@ -1,72 +1,82 @@
 import Image from 'next/image';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent, CardHeader } from '@/components/ui/card';
+import { HeartHandshake, BookUser, ShieldPlus, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
-import { Hospital, Users, ShieldAlert } from 'lucide-react';
+import { Button } from '../ui/button';
 
 const featureCards = [
   {
-    icon: <Hospital className="h-8 w-8 text-primary" />,
-    title: "Seguro Esencial",
-    description: "Cobertura médica ambulatoria y preventiva."
+    icon: <HeartHandshake className="h-10 w-10 text-primary" />,
+    title: "Planes Flexibles",
+    description: "Seguros diseñados para adaptarse a sus necesidades y presupuesto."
   },
   {
-    icon: <Users className="h-8 w-8 text-primary" />,
-    title: "Seguro Familiar",
-    description: "Protección integral para todos los miembros de tu familia."
+    icon: <BookUser className="h-10 w-10 text-primary" />,
+    title: "Asesoría Experta",
+    description: "Nuestro equipo le guiará para que elija la mejor cobertura."
   },
   {
-    icon: <ShieldAlert className="h-8 w-8 text-primary" />,
-    title: "Seguro Premium",
-    description: "Acceso exclusivo a la red más completa de especialistas."
+    icon: <ShieldPlus className="h-10 w-10 text-primary" />,
+    title: "Soporte Continuo",
+    description: "Estamos con usted en cada paso, desde la afiliación hasta los reclamos."
   }
 ];
 
 const Hero = () => {
   return (
-    <section className="relative bg-background pt-20 pb-16 md:pb-32">
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-10"
-        style={{ backgroundImage: "url('https://placehold.co/1920x1080.png')" }}
-        data-ai-hint="medical background"
-      ></div>
-      <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent"></div>
+    <>
+      <section className="relative bg-background pt-24 pb-32">
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: "url('https://placehold.co/1920x800.png')" }}
+          data-ai-hint="happy family"
+        ></div>
+        <div className="absolute inset-0 bg-primary/80"></div>
 
-      <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center space-y-6 max-w-3xl mx-auto">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-primary font-headline">
-              Estamos Listos Para Proteger a tu Familia
-            </h1>
-            <p className="text-lg text-muted-foreground">
-              Su bienestar, nuestra prioridad. Acceda a la mejor cobertura de salud integral para usted y su familia en toda Lima Norte.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg" className="font-semibold">
-                <Link href="#servicios">Ver Servicios</Link>
-              </Button>
-              <Button asChild size="lg" variant="outline" className="font-semibold">
-                <Link href="#contacto">Contáctenos</Link>
-              </Button>
+        <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="grid md:grid-cols-2 gap-16 items-center">
+            <div className="text-white space-y-6">
+              <p className="font-semibold text-accent bg-accent/20 px-4 py-1 rounded-full inline-block">SU BIENESTAR, NUESTRA PRIORIDAD</p>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight font-headline">
+                Protegiendo la Salud de las Familias de Lima Norte
+              </h1>
+              <p className="text-lg text-primary-foreground/80">
+                Ofrecemos seguros de salud confiables y accesibles. Encuentre el plan perfecto para usted y su familia hoy mismo.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button asChild size="lg" className="font-semibold bg-accent text-accent-foreground hover:bg-accent/90">
+                  <Link href="#planes">Ver Planes <ArrowRight className="ml-2 h-5 w-5"/></Link>
+                </Button>
+                <Button asChild size="lg" variant="outline" className="font-semibold text-white border-white hover:bg-white hover:text-primary">
+                  <Link href="#sobre-nosotros">Saber Más</Link>
+                </Button>
+              </div>
             </div>
+            <div className="hidden md:block">
+              {/* This space can be used for an illustration or form preview in the future */}
+            </div>
+          </div>
         </div>
-      </div>
+      </section>
 
-      <div className="relative z-20 container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 -mt-16 md:-mt-24">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {featureCards.map(card => (
-            <Card key={card.title} className="shadow-lg hover:shadow-xl hover:-translate-y-2 transition-transform duration-300">
-              <CardHeader className="flex-row items-center gap-4 space-y-0 pb-2">
-                <div className="bg-primary/10 p-3 rounded-lg">{card.icon}</div>
-                <CardTitle className="text-xl font-semibold">{card.title}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">{card.description}</p>
-              </CardContent>
-            </Card>
-          ))}
+      <section className="bg-background relative -mt-20 z-20 pb-20">
+        <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {featureCards.map(card => (
+              <Card key={card.title} className="shadow-lg hover:shadow-xl hover:-translate-y-2 transition-transform duration-300 border-t-4 border-primary">
+                <CardHeader className="flex-row items-center gap-4 space-y-0 pb-4">
+                  <div className="bg-primary/10 p-4 rounded-lg">{card.icon}</div>
+                </CardHeader>
+                <CardContent>
+                  <h3 className="text-xl font-bold mb-2">{card.title}</h3>
+                  <p className="text-muted-foreground">{card.description}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 };
 
