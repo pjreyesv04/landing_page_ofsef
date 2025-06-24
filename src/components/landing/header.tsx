@@ -7,10 +7,10 @@ import { Menu, ShieldCheck } from 'lucide-react';
 import { useState } from 'react';
 
 const navLinks = [
+  { href: '#sobre-nosotros', label: 'Sobre Nosotros' },
   { href: '#servicios', label: 'Servicios' },
   { href: '#planes', label: 'Planes' },
   { href: '#anuncios', label: 'Anuncios' },
-  { href: '#recursos', label: 'Recursos' },
   { href: '#contacto', label: 'Contacto' },
 ];
 
@@ -19,18 +19,21 @@ const Header = () => {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link href="/" className="flex items-center gap-2">
           <ShieldCheck className="h-8 w-8 text-primary" />
-          <span className="font-bold text-lg text-primary font-headline">Redes Seguras</span>
+          <span className="font-bold text-xl text-primary font-headline">Redes Seguras</span>
         </Link>
 
-        <nav className="hidden md:flex gap-6">
+        <nav className="hidden md:flex items-center gap-6">
           {navLinks.map((link) => (
             <Link key={link.href} href={link.href} className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors">
               {link.label}
             </Link>
           ))}
+          <Button asChild className="bg-accent text-accent-foreground hover:bg-accent/90">
+            <Link href="#planes">Cotizar Ahora</Link>
+          </Button>
         </nav>
 
         <div className="md:hidden">
@@ -52,6 +55,9 @@ const Header = () => {
                     {link.label}
                   </Link>
                 ))}
+                <Button asChild className="bg-accent text-accent-foreground hover:bg-accent/90 mt-4">
+                  <Link href="#planes" onClick={() => setMenuOpen(false)}>Cotizar Ahora</Link>
+                </Button>
               </div>
             </SheetContent>
           </Sheet>

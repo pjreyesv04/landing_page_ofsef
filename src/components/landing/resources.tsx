@@ -1,60 +1,58 @@
+import Image from 'next/image';
 import { Button } from '@/components/ui/button';
-import { Download, FileText, HelpCircle } from 'lucide-react';
+import { Check } from 'lucide-react';
 import Link from 'next/link';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
-const resources = [
-  {
-    icon: <FileText className="h-8 w-8 text-primary" />,
-    title: 'Formulario de Reclamo',
-    description: 'Descargue el formulario para solicitar reembolsos o cobertura.',
-    link: '#'
-  },
-  {
-    icon: <Download className="h-8 w-8 text-primary" />,
-    title: 'Documentos de Póliza',
-    description: 'Acceda a los términos y condiciones completos de nuestros planes.',
-    link: '#'
-  },
-  {
-    icon: <HelpCircle className="h-8 w-8 text-primary" />,
-    title: 'Preguntas Frecuentes',
-    description: 'Encuentre respuestas a las dudas más comunes sobre nuestros seguros.',
-    link: '#'
-  }
+const features = [
+  "Más de 20 años de experiencia.",
+  "Equipo de profesionales altamente calificados.",
+  "Compromiso con la salud de la comunidad.",
+  "Procesos transparentes y eficientes."
 ];
 
-const Resources = () => {
+const About = () => {
   return (
-    <section id="recursos" className="py-20">
+    <section id="sobre-nosotros" className="py-20">
       <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="text-center space-y-4 mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold font-headline text-primary">Recursos y Descargas</h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Todo lo que necesita para gestionar su seguro de manera fácil y rápida.
-          </p>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {resources.map((resource) => (
-            <Card key={resource.title} className="flex flex-col items-center text-center shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <CardHeader className="items-center">
-                 <div className="bg-accent/20 p-4 rounded-full">
-                  {resource.icon}
-                </div>
-              </CardHeader>
-              <CardContent className="flex flex-col flex-grow items-center">
-                <CardTitle className="text-xl font-headline mb-2">{resource.title}</CardTitle>
-                <p className="text-muted-foreground mb-4 flex-grow">{resource.description}</p>
-                 <Button asChild variant="outline" className="mt-auto">
-                  <Link href={resource.link}>Acceder Ahora</Link>
-                </Button>
-              </CardContent>
-            </Card>
-          ))}
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="relative">
+            <Image
+              src="https://placehold.co/600x700.png"
+              alt="Personal médico de DIRIS Lima Norte"
+              width={600}
+              height={700}
+              className="rounded-lg shadow-2xl object-cover w-full h-full"
+              data-ai-hint="medical staff"
+            />
+            <div className="absolute -bottom-4 -right-4 bg-primary text-primary-foreground p-6 rounded-lg shadow-lg max-w-xs">
+              <p className="font-bold text-4xl">20+</p>
+              <p className="text-sm">Años de experiencia sirviendo a Lima Norte</p>
+            </div>
+          </div>
+          <div className="space-y-6">
+            <p className="font-semibold text-primary">SOBRE NOSOTROS</p>
+            <h2 className="text-3xl md:text-4xl font-bold font-headline">
+              La Mejor Opción de Seguro en la Zona
+            </h2>
+            <p className="text-muted-foreground">
+              Somos la Oficina de Seguros de la Dirección de Redes Integradas de Salud de Lima Norte, una entidad pública comprometida con garantizar el acceso a servicios de salud de calidad para todos los ciudadanos de nuestra jurisdicción.
+            </p>
+            <ul className="space-y-3">
+              {features.map((feature, i) => (
+                <li key={i} className="flex items-center gap-3">
+                  <Check className="h-5 w-5 text-accent" />
+                  <span className="text-foreground/80">{feature}</span>
+                </li>
+              ))}
+            </ul>
+            <Button asChild size="lg" variant="outline">
+              <Link href="#contacto">Leer Más</Link>
+            </Button>
+          </div>
         </div>
       </div>
     </section>
   );
 };
 
-export default Resources;
+export default About;

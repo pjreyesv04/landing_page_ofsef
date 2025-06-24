@@ -1,22 +1,30 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Newspaper } from 'lucide-react';
+import Image from 'next/image';
+import Link from 'next/link';
+import { ArrowRight } from 'lucide-react';
 
 const announcements = [
   {
     date: '15 de Julio, 2024',
     title: 'Nueva campaña de vacunación contra la influenza estacional.',
-    category: 'Campaña'
+    category: 'Campaña',
+    image: 'https://placehold.co/600x400.png',
+    hint: 'vaccination campaign'
   },
   {
     date: '01 de Julio, 2024',
     title: 'Actualización de la red de clínicas afiliadas en Comas y Puente Piedra.',
-    category: 'Actualización'
+    category: 'Actualización',
+    image: 'https://placehold.co/600x400.png',
+    hint: 'clinic building'
   },
   {
     date: '20 de Junio, 2024',
     title: 'Charla informativa sobre prevención de enfermedades crónicas.',
-    category: 'Evento'
+    category: 'Evento',
+    image: 'https://placehold.co/600x400.png',
+    hint: 'health talk'
   }
 ];
 
@@ -30,28 +38,33 @@ const Announcements = () => {
             Manténgase informado sobre nuestras últimas noticias y eventos importantes.
           </p>
         </div>
-        <div className="max-w-3xl mx-auto">
-          <Card className="shadow-lg">
-            <CardHeader>
-              <CardTitle className="flex items-center gap-2">
-                <Newspaper className="h-6 w-6 text-primary" />
-                <span>Últimos Anuncios</span>
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <ul className="space-y-6">
-                {announcements.map((item, index) => (
-                  <li key={index} className="flex flex-col sm:flex-row gap-4 items-start border-b border-border pb-4 last:border-b-0 last:pb-0">
-                    <div className="flex-grow">
-                      <p className="font-semibold text-foreground">{item.title}</p>
-                      <p className="text-sm text-muted-foreground">{item.date}</p>
-                    </div>
-                    <Badge variant="secondary" className="mt-1 sm:mt-0">{item.category}</Badge>
-                  </li>
-                ))}
-              </ul>
-            </CardContent>
-          </Card>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {announcements.map((item) => (
+            <Card key={item.title} className="flex flex-col overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <Image 
+                src={item.image}
+                alt={item.title}
+                width={600}
+                height={400}
+                className="w-full h-48 object-cover"
+                data-ai-hint={item.hint}
+              />
+              <CardHeader>
+                <div className="flex justify-between items-center text-sm text-muted-foreground">
+                  <span>{item.date}</span>
+                  <Badge variant="secondary">{item.category}</Badge>
+                </div>
+                <CardTitle className="text-xl font-semibold leading-snug !mt-2">{item.title}</CardTitle>
+              </CardHeader>
+              <CardContent className="flex-grow">
+              </CardContent>
+              <div className="p-6 pt-0">
+                <Link href="#" className="font-semibold text-primary hover:text-accent transition-colors flex items-center gap-2">
+                  Leer más <ArrowRight className="h-4 w-4" />
+                </Link>
+              </div>
+            </Card>
+          ))}
         </div>
       </div>
     </section>

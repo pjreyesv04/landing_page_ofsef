@@ -54,7 +54,7 @@ const Plans = () => {
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
           {plans.map((plan) => (
-            <Card key={plan.name} className={`flex flex-col h-full shadow-lg transition-all duration-300 ${plan.isPopular ? 'border-primary border-2 shadow-primary/20 lg:scale-105' : 'hover:shadow-xl'}`}>
+            <Card key={plan.name} className={`flex flex-col h-full shadow-lg transition-all duration-300 hover:shadow-xl ${plan.isPopular ? 'border-primary border-2' : ''}`}>
               {plan.isPopular && (
                 <div className="bg-primary text-primary-foreground text-center py-1.5 text-sm font-semibold rounded-t-lg">
                   Más Popular
