@@ -28,7 +28,7 @@ const Hero = () => {
       <section className="relative bg-background pt-24 pb-32">
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: "url('https://placehold.co/1920x800.png')" }}
+          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1541019623835-9515934a3628?q=80&w=2070&auto=format&fit=crop')" }}
           data-ai-hint="happy family"
         ></div>
         <div className="absolute inset-0 bg-primary/80"></div>

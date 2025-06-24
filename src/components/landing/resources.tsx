@@ -18,7 +18,7 @@ const About = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="relative">
             <Image
-              src="https://placehold.co/600x700.png"
+              src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=2070&auto=format&fit=crop"
               alt="Equipo de la Oficina de Seguros de DIRIS Lima Norte"
               width={600}
               height={700}

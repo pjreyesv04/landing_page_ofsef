@@ -40,7 +40,7 @@ const Contact = () => {
     <section 
       id="contacto" 
       className="py-24 bg-cover bg-center relative"
-      style={{ backgroundImage: "url('https://placehold.co/1920x800.png')" }}
+      style={{ backgroundImage: "url('https://images.unsplash.com/photo-1587560418329-a5b163e74828?q=80&w=1974&auto=format&fit=crop')" }}
       data-ai-hint="call center agents"
     >
       <div className="absolute inset-0 bg-background/90"></div>

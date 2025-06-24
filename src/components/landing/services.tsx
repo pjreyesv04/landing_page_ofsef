@@ -116,7 +116,7 @@ const Services = () => {
                 </div>
                  <div className="relative">
                     <Image
-                    src="https://placehold.co/600x700.png"
+                    src="https://images.unsplash.com/photo-1622253692010-33352da603d7?q=80&w=1964&auto=format&fit=crop"
                     alt="Doctora sonriendo"
                     width={600}
                     height={700}
