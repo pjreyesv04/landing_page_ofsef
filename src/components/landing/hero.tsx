@@ -25,7 +25,7 @@ const featureCards = [
 const Hero = () => {
   return (
     <>
-      <section className="relative bg-background pt-24 pb-32">
+      <section className="relative pt-24 pb-32">
         <Image
           src="https://images.unsplash.com/photo-1593078942735-a89b0a0a5b06?q=80&w=2070&auto=format&fit=crop"
           alt="Familia unida y protegida"
