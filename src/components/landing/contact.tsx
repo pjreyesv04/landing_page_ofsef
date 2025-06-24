@@ -43,7 +43,7 @@ const Contact = () => {
       className="py-24 relative"
     >
       <Image
-        src="https://placehold.co/1920x1080.png"
+        src="https://images.unsplash.com/photo-1587560699334-cc4ff634909a?q=80&w=1920&h=1080&fit=crop"
         alt="Agentes de call center"
         fill
         className="object-cover"

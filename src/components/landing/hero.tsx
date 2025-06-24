@@ -27,7 +27,7 @@ const Hero = () => {
     <>
       <section className="relative pt-24 pb-32">
         <Image
-          src="https://placehold.co/1920x1080.png"
+          src="https://images.unsplash.com/photo-1541434389-322074362177?q=80&w=1920&h=1080&fit=crop"
           alt="Familia unida y protegida"
           fill
           className="object-cover"
@@ -62,7 +62,7 @@ const Hero = () => {
         </div>
       </section>
 
-      <section className="bg-background relative -mt-20 z-20 pb-20">
+      <section id="sobre-nosotros" className="bg-background relative -mt-20 z-20 pb-20">
         <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {featureCards.map(card => (

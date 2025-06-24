@@ -12,12 +12,12 @@ const features = [
 
 const About = () => {
   return (
-    <section id="sobre-nosotros" className="py-20 bg-card">
+    <section className="py-20 bg-card">
       <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="relative aspect-[6/7]">
             <Image
-              src="https://placehold.co/600x700.png"
+              src="https://images.unsplash.com/photo-1576091160550-2173dba9996a?q=80&w=600&h=700&fit=crop"
               alt="Equipo de la Oficina de Seguros de DIRIS Lima Norte"
               fill
               className="rounded-lg shadow-2xl object-cover"
