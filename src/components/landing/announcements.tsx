@@ -16,10 +16,10 @@ const announcements = [
   {
     date: '01 de Julio, 2024',
     author: 'Oficina de Seguros',
-    title: 'Actualización de la red de clínicas afiliadas en Comas.',
+    title: 'Actualización de la red de Establecimientos de salud afiliados en Comas.',
     category: 'Actualización',
-    image: 'https://images.unsplash.com/photo-1616642646299-444368815a20?q=80&w=1974&auto=format&fit=crop',
-    hint: 'clinic building'
+    image: 'https://images.unsplash.com/photo-16166422646299-444368815a20?q=80&w=1974&auto=format&fit=crop',
+    hint: 'health facility'
   },
   {
     date: '20 de Junio, 2024',

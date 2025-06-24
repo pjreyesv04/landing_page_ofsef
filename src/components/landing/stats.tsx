@@ -57,14 +57,14 @@ const atencionesChartConfig = {
 const produccionData = [
   { name: "Hospital A", value: 3245, fill: "hsl(var(--chart-1))" },
   { name: "Hospital B", value: 2875, fill: "hsl(var(--chart-2))" },
-  { name: "Clínica C", value: 2000, fill: "hsl(var(--chart-3))" },
+  { name: "Centro C", value: 2000, fill: "hsl(var(--chart-3))" },
   { name: "Centro D", value: 1500, fill: "hsl(var(--chart-4))" },
 ]
 const produccionChartConfig = {
   produccion: { label: "Producción" },
   "Hospital A": { label: "Hospital A", color: "hsl(var(--chart-1))" },
   "Hospital B": { label: "Hospital B", color: "hsl(var(--chart-2))" },
-  "Clínica C": { label: "Clínica C", color: "hsl(var(--chart-3))" },
+  "Centro C": { label: "Centro C", color: "hsl(var(--chart-3))" },
   "Centro D": { label: "Centro D", color: "hsl(var(--chart-4))" },
 } satisfies ChartConfig
 

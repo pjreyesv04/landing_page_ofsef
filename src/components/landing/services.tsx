@@ -101,7 +101,7 @@ const Services = () => {
                             </AccordionContent>
                         </AccordionItem>
                         <AccordionItem value="item-2">
-                            <AccordionTrigger className="font-semibold text-lg">¿Qué clínicas están en la red?</AccordionTrigger>
+                            <AccordionTrigger className="font-semibold text-lg">¿Qué Establecimientos de salud están en la red?</AccordionTrigger>
                             <AccordionContent>
                             Contamos con una amplia red de establecimientos de salud del MINSA en toda la jurisdicción de Lima Norte, incluyendo hospitales, centros de salud y puestos de salud estratégicamente ubicados.
                             </AccordionContent>
