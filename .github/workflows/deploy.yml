@@ -33,6 +33,12 @@ jobs:
       - name: Build Next.js
         run: npm run build
         
+      - name: Verify build output
+        run: |
+          ls -la ./out/
+          echo "Checking for index.html:"
+          ls -la ./out/index.html || echo "index.html not found"
+        
       - name: Add .nojekyll file
         run: touch ./out/.nojekyll
         
