@@ -16,6 +16,9 @@ concurrency:
 
 jobs:
   build-and-deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -24,7 +27,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          node-version: '20'
           cache: 'npm'
           
       - name: Install dependencies
@@ -33,11 +36,17 @@ jobs:
       - name: Build Next.js
         run: npm run build
         
-      - name: Verify build output
+      - name: List build directory
         run: |
-          ls -la ./out/
-          echo "Checking for index.html:"
-          ls -la ./out/index.html || echo "index.html not found"
+          echo "Contents of ./out directory:"
+          ls -la ./out/ || echo "out directory not found"
+          echo "Checking if index.html exists:"
+          if [ -f "./out/index.html" ]; then
+            echo "✓ index.html found"
+            ls -la ./out/index.html
+          else
+            echo "✗ index.html not found"
+          fi
         
       - name: Add .nojekyll file
         run: touch ./out/.nojekyll
