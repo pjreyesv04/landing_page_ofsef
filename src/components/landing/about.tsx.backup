@@ -17,7 +17,7 @@ const About = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="relative aspect-[6/7]">
             <Image
-              src="/images/backgrounds/medical-team.jpg"
+              src="https://cdn.pixabay.com/photo/2018/03/10/12/00/teamwork-3213924_960_720.jpg"
               alt="Equipo de la Oficina de Seguros de DIRIS Lima Norte"
               fill
               className="rounded-lg shadow-2xl object-cover"
@@ -58,4 +58,3 @@ const About = () => {
 };
 
 export default About;
-

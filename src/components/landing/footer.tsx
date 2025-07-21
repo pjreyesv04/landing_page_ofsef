@@ -1,7 +1,5 @@
-import { ShieldCheck, Twitter, Facebook, Instagram, Mail, MapPin, Phone, ArrowRight } from 'lucide-react';
+import { ShieldCheck, Twitter, Facebook, Instagram, Mail, MapPin, Phone } from 'lucide-react';
 import Link from 'next/link';
-import { Button } from '../ui/button';
-import { Input } from '../ui/input';
 
 const Footer = () => {
   const year = new Date().getFullYear();
@@ -9,7 +7,7 @@ const Footer = () => {
   return (
     <footer className="bg-slate-900 text-slate-300" id="footer-contact">
       <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-8">
           <div className="space-y-4">
             <Link href="/" className="flex items-center gap-2">
               <ShieldCheck className="h-8 w-8 text-accent" />
@@ -50,7 +48,7 @@ const Footer = () => {
             <ul className="space-y-3 text-sm">
               <li className="flex items-start gap-3">
                 <MapPin className="h-4 w-4 text-accent mt-1 shrink-0" />
-                <span>Av. Túpac Amaru Km. 5.5, Independencia, Lima</span>
+                <span>Calle A Mz. 02 Lt. 03 Asoc. Víctor Raúl Haya de la Torre - Distrito Independencia - Lima - Perú</span>
               </li>
               <li className="flex items-start gap-3">
                 <Mail className="h-4 w-4 text-accent mt-1 shrink-0" />
@@ -58,26 +56,19 @@ const Footer = () => {
               </li>
                <li className="flex items-start gap-3">
                 <Phone className="h-4 w-4 text-accent mt-1 shrink-0" />
-                <a href="tel:+5115551234" className="hover:text-white">(01) 555-1234</a>
+                <div className="space-y-1">
+                  <a href="tel:+515213400" className="hover:text-white block">(01) 521-3401</a>
+                  <span className="text-xs text-slate-400">Lun-Vie: 8:00-16:30</span>
+                  <a href="tel:+515213401" className="hover:text-white block text-accent">Telefono: (01) 521-3401</a>
+                </div>
               </li>
             </ul>
-          </div>
-
-          <div className="space-y-4">
-            <h3 className="font-semibold text-lg text-white">Boletín Informativo</h3>
-            <p className="text-sm">Suscríbase para recibir nuestras últimas noticias y ofertas especiales.</p>
-            <form className="flex gap-2">
-                <Input type="email" placeholder="Su email" className="bg-slate-800 border-slate-700 text-white" />
-                <Button type="submit" size="icon" className="bg-accent hover:bg-accent/80 shrink-0">
-                    <ArrowRight className="h-4 w-4" />
-                </Button>
-            </form>
           </div>
         </div>
       </div>
       <div className="bg-slate-950 py-4">
          <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center text-sm text-slate-400">
-             © {year} Dirección de Redes Integradas de Salud Lima Norte. Todos los derechos reservados.
+             © {year} Oficina de Seguros - Dirección de Redes Integradas de Salud Lima Norte. Todos los derechos reservados.
         </div>
       </div>
     </footer>

@@ -6,6 +6,9 @@ import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Menu, ShieldCheck, Phone, Mail, MapPin, Facebook, Twitter, Instagram } from 'lucide-react';
 import { useState } from 'react';
 
+// --- URL CORRECTA YA APLICADA ---
+const SISTEMA_URL = 'http://simsic.dirislimanorte.gob.pe/indicadores/sistema.php'; 
+
 const navLinks = [
   { href: '#sobre-nosotros', label: 'Sobre Nosotros' },
   { href: '#estadisticas', label: 'Nuestras Cifras' },
@@ -24,31 +27,36 @@ const Header = () => {
     <header className="sticky top-0 z-50 w-full bg-background shadow-md">
       {/* Top Bar */}
       <div className="bg-primary text-primary-foreground py-2">
-        <div className="container mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8 text-xs">
-          <div className="flex items-center gap-6">
-            <div className="flex items-center gap-2">
-              <Phone className="h-4 w-4" />
-              <span>(01) 555-1234</span>
+        <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+            <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-6 text-xs sm:text-sm">
+              <div className="flex items-center gap-2">
+                <Phone className="h-3 w-3" />
+                <span>Emergencias: (01) 521-3401</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Mail className="h-3 w-3" />
+                <span>seguros@dirislimanorte.gob.pe</span>
+              </div>
+              <div className="hidden md:flex items-center gap-2">
+                <MapPin className="h-3 w-3" />
+                <span>Lun-Vie: 8:00-4:30</span>
+              </div>
             </div>
-            <div className="hidden md:flex items-center gap-2">
-              <Mail className="h-4 w-4" />
-              <span>seguros@dirislimanorte.gob.pe</span>
+            <div className="flex items-center gap-3">
+              <span className="text-xs hidden sm:inline">Síguenos:</span>
+              <div className="flex gap-2">
+                <Link href="https://web.facebook.com/DIRISLimaNorte/?_rdc=1&_rdr" className="hover:text-accent transition-colors">
+                  <Facebook className="h-3 w-3" />
+                </Link>
+                <Link href="https://x.com/DirisLimaNorte" className="hover:text-accent transition-colors">
+                  <Twitter className="h-3 w-3" />
+                </Link>
+                <Link href="https://www.instagram.com/dirislimanorte_oficial/" className="hover:text-accent transition-colors">
+                  <Instagram className="h-3 w-3" />
+                </Link>
+              </div>
             </div>
-            <div className="hidden lg:flex items-center gap-2">
-                <MapPin className="h-4 w-4" />
-                <span>Av. Túpac Amaru Km. 5.5, Independencia</span>
-            </div>
-          </div>
-          <div className="flex gap-4">
-            <Link href="#" className="hover:opacity-80 transition-opacity" aria-label="Facebook">
-              <Facebook className="h-4 w-4" />
-            </Link>
-            <Link href="#" className="hover:opacity-80 transition-opacity" aria-label="Twitter">
-              <Twitter className="h-4 w-4" />
-            </Link>
-            <Link href="#" className="hover:opacity-80 transition-opacity" aria-label="Instagram">
-              <Instagram className="h-4 w-4" />
-            </Link>
           </div>
         </div>
       </div>
@@ -70,8 +78,15 @@ const Header = () => {
 
         <div className="flex items-center gap-4">
             <Button asChild className="hidden lg:flex bg-accent text-accent-foreground hover:bg-accent/90 font-semibold">
-                <Link href="#contacto">Obtener Cotización</Link>
+              <Link 
+                href={SISTEMA_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Acceder al Sistema
+              </Link>
             </Button>
+            
             <div className="lg:hidden">
             <Sheet open={isMenuOpen} onOpenChange={setMenuOpen}>
                 <SheetTrigger asChild>
@@ -92,7 +107,14 @@ const Header = () => {
                     </Link>
                     ))}
                     <Button asChild className="bg-accent text-accent-foreground hover:bg-accent/90 mt-4">
-                    <Link href="#contacto" onClick={() => setMenuOpen(false)}>Obtener Cotización</Link>
+                      <Link 
+                        href={SISTEMA_URL}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={() => setMenuOpen(false)}
+                      >
+                        Accede al Sistema
+                      </Link>
                     </Button>
                 </div>
                 </SheetContent>
