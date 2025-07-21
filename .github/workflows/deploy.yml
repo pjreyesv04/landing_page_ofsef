@@ -33,15 +33,6 @@ jobs:
       - name: Build Next.js
         run: npm run build
         
-      - name: Copy redirect index.html
-        run: cp index.html ./out/
-        
-      - name: Create landing_page_ofsef directory
-        run: |
-          mkdir -p ./out/landing_page_ofsef
-          cp -r ./out/* ./out/landing_page_ofsef/ || true
-          cp index.html ./out/
-        
       - name: Add .nojekyll file
         run: touch ./out/.nojekyll
         
