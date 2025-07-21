@@ -5,6 +5,11 @@ export function getImagePath(path: string): string {
   // Remove leading slash if present
   const cleanPath = path.startsWith('/') ? path.slice(1) : path;
   
-  // Always use path as-is with leading slash for simplified deployment
+  // In production (GitHub Pages), we need the repository name prefix
+  if (process.env.NODE_ENV === 'production') {
+    return `/landing_page_ofsef/${cleanPath}`;
+  }
+  
+  // In development, use the path as-is with leading slash
   return `/${cleanPath}`;
 }
