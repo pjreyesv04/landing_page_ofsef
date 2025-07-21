@@ -26,7 +26,7 @@ const sisPlans = [
       'Atención de emergencias.',
       'Sin costo para el ciudadano.'
     ],
-    isPopular: true,
+    isPopular: false,
   },
   {
     name: 'SIS Independiente',
@@ -67,12 +67,7 @@ const Plans = () => {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 items-start">
           {sisPlans.map((plan) => (
-            <Card key={plan.name} className={`flex flex-col h-full shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-105 ${plan.isPopular ? 'border-accent border-2 relative' : 'border-border'}`}>
-              {plan.isPopular && (
-                <div className="absolute -top-4 right-4 bg-accent text-accent-foreground px-4 py-1 text-sm font-semibold rounded-full shadow-lg">
-                  Popular
-                </div>
-              )}
+            <Card key={plan.name} className="flex flex-col h-full shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-105 border-border">
               <CardHeader className="items-center text-center pt-8">
                 <div className="p-4 bg-primary/10 rounded-full mb-4">
                   {plan.icon}
@@ -91,7 +86,7 @@ const Plans = () => {
                 </ul>
               </CardContent>
               <CardFooter>
-                 <Button asChild className="w-full font-semibold" variant={plan.isPopular ? 'default' : 'outline'}>
+                 <Button asChild className="w-full font-semibold" variant="outline">
                     <Link href="#contacto">Más Información</Link>
                 </Button>
               </CardFooter>
