@@ -1,8 +1,10 @@
 import Image from 'next/image';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
-import { Goal, Eye, Gem, ArrowRight } from 'lucide-react';
+import { Goal, Eye, Gem, ArrowRight, Heart, Shield, Users, Award } from 'lucide-react';
 import Link from 'next/link';
-import { Button } from '../ui/button';
+import React from 'react';
+import { Button } from '@/components/ui/button';
+import { getImagePath } from '@/lib/image-paths';
 
 const featureCards = [
   {
@@ -27,7 +29,7 @@ const Hero = () => {
     <>
       <section className="relative pt-24 pb-32">
         <Image
-          src="/images/backgrounds/family-hero.jpg"
+          src={getImagePath("images/backgrounds/family-hero.jpg")}
           alt="Familia unida y protegida"
           fill
           className="object-cover"

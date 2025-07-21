@@ -2,6 +2,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Stethoscope, Bed, Smile, Baby, FlaskConical, Ambulance, CheckCircle2, ShieldQuestion } from 'lucide-react';
 import Image from 'next/image';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
+import { getImagePath } from '@/lib/image-paths';
 
 const services = [
   {
@@ -116,7 +117,7 @@ const Services = () => {
                 </div>
                  <div className="relative aspect-[6/7]">
                     <Image
-                    src="/images/backgrounds/smiling-doctor.jpg"
+                    src={getImagePath("images/backgrounds/smiling-doctor.jpg")}
                     alt="Doctora sonriendo"
                     fill
                     className="rounded-lg shadow-2xl object-cover"

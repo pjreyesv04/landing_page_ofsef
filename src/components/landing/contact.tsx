@@ -8,10 +8,11 @@ import * as z from "zod";
 import { Form, FormControl, FormField, FormItem, FormMessage } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { getImagePath } from '@/lib/image-paths';
+import Image from 'next/image';
 import { useToast } from "@/hooks/use-toast";
 import { ArrowRight } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import Image from 'next/image';
 
 const formSchema = z.object({
   name: z.string().min(2, { message: "El nombre es requerido." }),
@@ -43,7 +44,7 @@ const Contact = () => {
       className="py-24 relative"
     >
       <Image
-        src="/images/backgrounds/call-center.jpg"
+        src={getImagePath("images/backgrounds/call-center.jpg")}
         alt="Agentes de call center"
         fill
         className="object-cover"

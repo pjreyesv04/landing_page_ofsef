@@ -3,6 +3,7 @@ import { Badge } from '@/components/ui/badge';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowRight, CalendarDays, UserCircle } from 'lucide-react';
+import { getImagePath } from '@/lib/image-paths';
 
 const announcements = [
   {
@@ -10,7 +11,7 @@ const announcements = [
     author: 'DIRIS LN',
     title: 'Nueva campaña de vacunación contra la influenza estacional.',
     category: 'Campaña',
-    image: '/images/announcements/vaccination-campaign.jpg',
+    image: getImagePath('images/announcements/vaccination-campaign.jpg'),
     hint: 'vaccination campaign'
   },
   {
@@ -18,7 +19,7 @@ const announcements = [
     author: 'Oficina de Seguros',
     title: 'Actualización de la red de Establecimientos de salud afiliados en Comas.',
     category: 'Actualización',
-    image: '/images/announcements/health-facility.jpg',
+    image: getImagePath('images/announcements/health-facility.jpg'),
     hint: 'health facility'
   },
   {
@@ -26,7 +27,7 @@ const announcements = [
     author: 'Prevención',
     title: 'Charla informativa sobre prevención de enfermedades crónicas.',
     category: 'Evento',
-    image: '/images/announcements/health-talk.jpg',
+    image: getImagePath('images/announcements/health-talk.jpg'),
     hint: 'health talk'
   }
 ];

@@ -2,6 +2,7 @@ import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { CheckCircle2, ShieldCheck } from 'lucide-react';
 import Link from 'next/link';
+import { getImagePath } from '@/lib/image-paths';
 
 const features = [
   "Gestionamos tu afiliación al Seguro Integral de Salud (SIS).",
@@ -17,7 +18,7 @@ const About = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="relative aspect-[6/7]">
             <Image
-              src="/images/backgrounds/medical-team.jpg"
+              src={getImagePath("images/backgrounds/medical-team.jpg")}
               alt="Equipo de la Oficina de Seguros de DIRIS Lima Norte"
               fill
               className="rounded-lg shadow-2xl object-cover"
