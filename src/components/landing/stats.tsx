@@ -28,7 +28,7 @@ const AnimatedCounter = ({
       (entries) => {
         if (entries[0].isIntersecting) {
           const duration = 2000
-          let start = 0
+          const start = 0
           const end = value
           const range = end - start
           let startTime: number | null = null

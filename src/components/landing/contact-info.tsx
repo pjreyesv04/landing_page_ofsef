@@ -2,7 +2,7 @@
 
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Clock, Phone, Mail, MapPin, Calendar, MessageCircle, FileText, Globe } from 'lucide-react';
+import { Clock, Phone, Mail, MapPin, Calendar, MessageCircle, Globe } from 'lucide-react';
 import Link from 'next/link';
 
 const ContactInfo = () => {
