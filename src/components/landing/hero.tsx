@@ -52,9 +52,7 @@ const Hero = () => {
                 <Button asChild size="lg" className="font-semibold bg-accent text-accent-foreground hover:bg-accent/90">
                   <Link href="#planes">Conoce los Planes SIS <ArrowRight className="ml-2 h-5 w-5"/></Link>
                 </Button>
-                <Button asChild size="lg" variant="outline" className="font-semibold text-white border-white hover:bg-white hover:text-primary">
-                  <Link href="#sobre-nosotros">Saber Más</Link>
-                </Button>
+                
               </div>
             </div>
             <div className="hidden md:block">

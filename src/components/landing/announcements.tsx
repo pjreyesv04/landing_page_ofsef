@@ -11,8 +11,8 @@ const announcements = [
     author: 'DIRIS Lima Norte',
     title: 'DIRIS Lima Norte revoluciona la gestión operativa de monitoreo clínico con aplicativo informático "Sígueme"',
     category: 'Tecnología',
-    image: getImagePath('images/announcements/health-facility.jpg'),
-    hint: 'health technology',
+    image: getImagePath('images/announcements/technology-app.jpg'),
+    hint: 'health technology app',
     link: 'https://www.gob.pe/institucion/dirislimanorte/noticias/1208790-diris-lima-norte-revoluciona-la-gestion-operativa-de-monitoreo-clinico-con-aplicativo-informatico-sigueme'
   },
   {
@@ -20,8 +20,8 @@ const announcements = [
     author: 'DIRIS Lima Norte',
     title: '¿Lluvia y tristeza?: Cómo abordar la depresión estacional',
     category: 'Salud Mental',
-    image: getImagePath('images/announcements/health-talk.jpg'),
-    hint: 'mental health',
+    image: getImagePath('images/announcements/mental-health.jpg'),
+    hint: 'mental health support',
     link: 'https://www.gob.pe/institucion/dirislimanorte/noticias/1209691-lluvia-y-tristeza-como-abordar-la-depresion-estacional'
   },
   {
@@ -30,7 +30,7 @@ const announcements = [
     title: '¿Qué es la influenza y por qué es importante vacunarse en temporada de invierno?',
     category: 'Prevención',
     image: getImagePath('images/announcements/vaccination-campaign.jpg'),
-    hint: 'vaccination campaign',
+    hint: 'influenza vaccination campaign',
     link: 'https://www.gob.pe/institucion/dirislimanorte/noticias/1199401-que-es-la-influenza-y-por-que-es-importante-vacunarse-en-temporada-de-invierno'
   },
   {
@@ -38,8 +38,8 @@ const announcements = [
     author: 'DIRIS Lima Norte',
     title: 'Independencia: Ministro de Salud y Diris Lima Norte inauguran Centro de Salud Mental Comunitario "Papa León XIV"',
     category: 'Inauguración',
-    image: getImagePath('images/announcements/health-facility.jpg'),
-    hint: 'health facility inauguration',
+    image: getImagePath('images/announcements/health-center-inauguration.jpg'),
+    hint: 'mental health center inauguration',
     link: 'https://www.gob.pe/institucion/dirislimanorte/noticias/1192642-independencia-ministro-de-salud-y-diris-lima-norte-inauguran-centro-de-salud-mental-comunitario-papa-leon-xiv'
   },
   {
@@ -47,8 +47,8 @@ const announcements = [
     author: 'DIRIS Lima Norte',
     title: 'Comas: Centro Materno Infantil Santa Luzmila II cuenta con nuevo módulo de atención de diabetes tipo 1',
     category: 'Servicios',
-    image: getImagePath('images/announcements/health-facility.jpg'),
-    hint: 'health facility',
+    image: getImagePath('images/announcements/diabetes-care.jpg'),
+    hint: 'diabetes care module',
     link: 'https://www.gob.pe/institucion/dirislimanorte/noticias/1192645-comas-centro-materno-infantil-santa-luzmila-ii-cuenta-con-nuevo-modulo-de-atencion-de-diabetes-tipo-1'
   },
   {
@@ -56,8 +56,8 @@ const announcements = [
     author: 'DIRIS Lima Norte',
     title: '¡Atención! Protégete de dengue ante las bajas temperaturas',
     category: 'Prevención',
-    image: getImagePath('images/announcements/health-talk.jpg'),
-    hint: 'prevention health talk',
+    image: getImagePath('images/announcements/dengue-prevention.jpg'),
+    hint: 'dengue prevention campaign',
     link: 'https://www.gob.pe/institucion/dirislimanorte/noticias/1192649-atencion-protegete-de-dengue-ante-las-bajas-temperaturas'
   }
 ];

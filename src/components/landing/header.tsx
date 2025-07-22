@@ -32,7 +32,7 @@ const Header = () => {
             <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-6 text-xs sm:text-sm">
               <div className="flex items-center gap-2">
                 <Phone className="h-3 w-3" />
-                <span>Emergencias: (01) 521-3401</span>
+                <span>Telefono: (01) 521-3401</span>
               </div>
               <div className="flex items-center gap-2">
                 <Mail className="h-3 w-3" />
