@@ -7,28 +7,58 @@ import { getImagePath } from '@/lib/image-paths';
 
 const announcements = [
   {
-    date: '15 de Julio, 2024',
-    author: 'DIRIS LN',
-    title: 'Nueva campaña de vacunación contra la influenza estacional.',
-    category: 'Campaña',
-    image: getImagePath('images/announcements/vaccination-campaign.jpg'),
-    hint: 'vaccination campaign'
-  },
-  {
-    date: '01 de Julio, 2024',
-    author: 'Oficina de Seguros',
-    title: 'Actualización de la red de Establecimientos de salud afiliados en Comas.',
-    category: 'Actualización',
+    date: '14 de julio, 2025',
+    author: 'DIRIS Lima Norte',
+    title: 'DIRIS Lima Norte revoluciona la gestión operativa de monitoreo clínico con aplicativo informático "Sígueme"',
+    category: 'Tecnología',
     image: getImagePath('images/announcements/health-facility.jpg'),
-    hint: 'health facility'
+    hint: 'health technology',
+    link: 'https://www.gob.pe/institucion/dirislimanorte/noticias/1208790-diris-lima-norte-revoluciona-la-gestion-operativa-de-monitoreo-clinico-con-aplicativo-informatico-sigueme'
   },
   {
-    date: '20 de Junio, 2024',
-    author: 'Prevención',
-    title: 'Charla informativa sobre prevención de enfermedades crónicas.',
-    category: 'Evento',
+    date: '13 de julio, 2025',
+    author: 'DIRIS Lima Norte',
+    title: '¿Lluvia y tristeza?: Cómo abordar la depresión estacional',
+    category: 'Salud Mental',
     image: getImagePath('images/announcements/health-talk.jpg'),
-    hint: 'health talk'
+    hint: 'mental health',
+    link: 'https://www.gob.pe/institucion/dirislimanorte/noticias/1209691-lluvia-y-tristeza-como-abordar-la-depresion-estacional'
+  },
+  {
+    date: '30 de junio, 2025',
+    author: 'DIRIS Lima Norte',
+    title: '¿Qué es la influenza y por qué es importante vacunarse en temporada de invierno?',
+    category: 'Prevención',
+    image: getImagePath('images/announcements/vaccination-campaign.jpg'),
+    hint: 'vaccination campaign',
+    link: 'https://www.gob.pe/institucion/dirislimanorte/noticias/1199401-que-es-la-influenza-y-por-que-es-importante-vacunarse-en-temporada-de-invierno'
+  },
+  {
+    date: '19 de junio, 2025',
+    author: 'DIRIS Lima Norte',
+    title: 'Independencia: Ministro de Salud y Diris Lima Norte inauguran Centro de Salud Mental Comunitario "Papa León XIV"',
+    category: 'Inauguración',
+    image: getImagePath('images/announcements/health-facility.jpg'),
+    hint: 'health facility inauguration',
+    link: 'https://www.gob.pe/institucion/dirislimanorte/noticias/1192642-independencia-ministro-de-salud-y-diris-lima-norte-inauguran-centro-de-salud-mental-comunitario-papa-leon-xiv'
+  },
+  {
+    date: '20 de junio, 2025',
+    author: 'DIRIS Lima Norte',
+    title: 'Comas: Centro Materno Infantil Santa Luzmila II cuenta con nuevo módulo de atención de diabetes tipo 1',
+    category: 'Servicios',
+    image: getImagePath('images/announcements/health-facility.jpg'),
+    hint: 'health facility',
+    link: 'https://www.gob.pe/institucion/dirislimanorte/noticias/1192645-comas-centro-materno-infantil-santa-luzmila-ii-cuenta-con-nuevo-modulo-de-atencion-de-diabetes-tipo-1'
+  },
+  {
+    date: '23 de junio, 2025',
+    author: 'DIRIS Lima Norte',
+    title: '¡Atención! Protégete de dengue ante las bajas temperaturas',
+    category: 'Prevención',
+    image: getImagePath('images/announcements/health-talk.jpg'),
+    hint: 'prevention health talk',
+    link: 'https://www.gob.pe/institucion/dirislimanorte/noticias/1192649-atencion-protegete-de-dengue-ante-las-bajas-temperaturas'
   }
 ];
 
@@ -57,18 +87,28 @@ const Announcements = () => {
                 />
               </div>
               <CardContent className="p-6 flex-grow flex flex-col">
-                <div className="flex items-center gap-4 text-xs text-muted-foreground mb-3">
-                    <div className="flex items-center gap-1.5">
-                        <CalendarDays className="h-4 w-4" />
-                        <span>{item.date}</span>
-                    </div>
-                    <div className="flex items-center gap-1.5">
-                        <UserCircle className="h-4 w-4" />
-                        <span>Por {item.author}</span>
-                    </div>
+                <div className="flex items-center justify-between mb-3">
+                  <div className="flex items-center gap-4 text-xs text-muted-foreground">
+                      <div className="flex items-center gap-1.5">
+                          <CalendarDays className="h-4 w-4" />
+                          <span>{item.date}</span>
+                      </div>
+                      <div className="flex items-center gap-1.5">
+                          <UserCircle className="h-4 w-4" />
+                          <span>Por {item.author}</span>
+                      </div>
+                  </div>
+                  <Badge variant="secondary" className="text-xs">
+                    {item.category}
+                  </Badge>
                 </div>
                 <h3 className="text-xl font-bold leading-snug mb-3 flex-grow">{item.title}</h3>
-                <Link href="#" className="font-semibold text-primary hover:text-accent transition-colors flex items-center gap-2">
+                <Link 
+                  href={item.link || "#"} 
+                  target={item.link ? "_blank" : undefined}
+                  rel={item.link ? "noopener noreferrer" : undefined}
+                  className="font-semibold text-primary hover:text-accent transition-colors flex items-center gap-2"
+                >
                   Leer más <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </CardContent>
