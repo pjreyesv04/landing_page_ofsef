@@ -11,18 +11,18 @@ const announcements = [
     author: 'DIRIS Lima Norte',
     title: 'DIRIS Lima Norte revoluciona la gestión operativa de monitoreo clínico con aplicativo informático "Sígueme"',
     category: 'Tecnología',
-    image: getImagePath('images/announcements/health-facility.jpg'),
+    image: getImagePath('images/announcements/technology-health.jpg'),
     hint: 'health technology app',
     link: 'https://www.gob.pe/institucion/dirislimanorte/noticias/1208790-diris-lima-norte-revoluciona-la-gestion-operativa-de-monitoreo-clinico-con-aplicativo-informatico-sigueme'
   },
   {
-    date: '13 de julio, 2025',
+    date: '27 de junio, 2025',
     author: 'DIRIS Lima Norte',
-    title: '¿Lluvia y tristeza?: Cómo abordar la depresión estacional',
-    category: 'Salud Mental',
+    title: 'Equipos de DIRIS Lima Norte participaron de la capacitación de TUA-SUSALUD',
+    category: 'SUSALUD',
     image: getImagePath('images/announcements/health-talk.jpg'),
-    hint: 'mental health support',
-    link: 'https://www.gob.pe/institucion/dirislimanorte/noticias/1209691-lluvia-y-tristeza-como-abordar-la-depresion-estacional'
+    hint: 'caoching session',
+    link: 'https://www.gob.pe/institucion/dirislimanorte/noticias/1199314-equipos-de-diris-lima-norte-participaron-de-la-capacitacion-de-tua-susalud'
   },
   {
     date: '30 de junio, 2025',
@@ -38,7 +38,7 @@ const announcements = [
     author: 'DIRIS Lima Norte',
     title: 'Independencia: Ministro de Salud y Diris Lima Norte inauguran Centro de Salud Mental Comunitario "Papa León XIV"',
     category: 'Inauguración',
-    image: getImagePath('images/announcements/health-facility.jpg'),
+    image: getImagePath('images/announcements/inauguracion.jpg'),
     hint: 'mental health center inauguration',
     link: 'https://www.gob.pe/institucion/dirislimanorte/noticias/1192642-independencia-ministro-de-salud-y-diris-lima-norte-inauguran-centro-de-salud-mental-comunitario-papa-leon-xiv'
   },
@@ -47,7 +47,7 @@ const announcements = [
     author: 'DIRIS Lima Norte',
     title: 'Comas: Centro Materno Infantil Santa Luzmila II cuenta con nuevo módulo de atención de diabetes tipo 1',
     category: 'Servicios',
-    image: getImagePath('images/announcements/health-facility.jpg'),
+    image: getImagePath('images/announcements/health-facility1.jpg'),
     hint: 'diabetes care module',
     link: 'https://www.gob.pe/institucion/dirislimanorte/noticias/1192645-comas-centro-materno-infantil-santa-luzmila-ii-cuenta-con-nuevo-modulo-de-atencion-de-diabetes-tipo-1'
   },
