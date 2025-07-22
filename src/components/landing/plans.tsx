@@ -15,6 +15,7 @@ const sisPlans = [
       'Medicamentos y procedimientos cubiertos.'
     ],
     isPopular: false,
+    link: 'https://www.gob.pe/133-afiliarte-al-sis-gratuito'
   },
   {
     name: 'SIS Para Todos',
@@ -27,6 +28,7 @@ const sisPlans = [
       'Sin costo para el ciudadano.'
     ],
     isPopular: false,
+    link: 'https://www.gob.pe/8970-afiliarte-al-sis-para-todos'
   },
   {
     name: 'SIS Independiente',
@@ -39,6 +41,7 @@ const sisPlans = [
       'Acceso a atenciones complejas.'
     ],
     isPopular: false,
+    link: 'https://www.gob.pe/172-sis-independiente'
   },
     {
     name: 'SIS Microempresas',
@@ -51,6 +54,7 @@ const sisPlans = [
       'Fomenta la formalización laboral.'
     ],
     isPopular: false,
+    link: 'https://www.gob.pe/180-sis-microempresas'
   }
 ];
 
@@ -87,7 +91,7 @@ const Plans = () => {
               </CardContent>
               <CardFooter>
                  <Button asChild className="w-full font-semibold" variant="outline">
-                    <Link href="#contacto">Más Información</Link>
+                    <Link href={plan.link} target="_blank" rel="noopener noreferrer">Más Información</Link>
                 </Button>
               </CardFooter>
             </Card>

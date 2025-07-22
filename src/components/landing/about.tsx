@@ -35,7 +35,7 @@ const About = () => {
           <div className="space-y-6">
             <p className="font-semibold text-primary">SOBRE NOSOTROS</p>
             <h2 className="text-3xl md:text-4xl font-bold font-headline">
-              Tu Puente hacia el Bienestar y la Salud
+              Tu Aliado hacia el Bienestar y la Salud
             </h2>
             <p className="text-muted-foreground text-lg">
               La Oficina de Seguros de la Dirección de Redes Integradas de Salud (DIRIS) de Lima Norte, es una entidad del Ministerio de Salud. Nuestra misión es garantizar el acceso de la población a la protección financiera en salud, gestionando la afiliación y el uso de las coberturas del Seguro Integral de Salud (SIS) y el Fondo Intangible Solidario en Salud (FISSAL).
