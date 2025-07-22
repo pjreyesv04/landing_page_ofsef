@@ -7,12 +7,12 @@ const documents = [
   {
     title: 'RJ de Afiliación',
     description: 'Documento oficial para el proceso de afiliación al SIS.',
-    link: '#',
+    link: 'https://www.gob.pe/institucion/sis/normas-legales/6881519-000078-2025-sis-j',
   },
   {
     title: 'RJ de Sepelios',
-    description: 'Formatos necesarios para la solicitud de cobertura por sepelio.',
-    link: '#',
+    description: 'Documento oficial para el proceso desolicitud de cobertura por sepelio.',
+    link: 'https://www.gob.pe/institucion/sis/normas-legales/6626326-000046-2025-sis-j',
   },
   {
     title: 'Guía de Cobertura FISSAL',
