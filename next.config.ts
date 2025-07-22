@@ -3,6 +3,7 @@ import type { NextConfig } from 'next';
 const nextConfig: NextConfig = {
   output: 'export',
   trailingSlash: true,
+  basePath: process.env.NODE_ENV === 'production' ? '/landing_page_ofsef' : '',
   assetPrefix: process.env.NODE_ENV === 'production' ? '/landing_page_ofsef' : '',
   typescript: {
     ignoreBuildErrors: true,
