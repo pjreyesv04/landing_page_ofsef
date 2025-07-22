@@ -111,34 +111,14 @@ const Analytics = () => {
       <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center space-y-4 mb-16">
-          <p className="font-semibold text-primary">ANALYTICS & REPORTES</p>
+          <p className="font-semibold text-primary">REPORTES & DASHBOARD</p>
           <h2 className="text-3xl md:text-4xl font-bold font-headline">
-            Centro de Inteligencia de Datos
+            Oficina de Seguros 
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            Acceda a reportes interactivos, dashboards en tiempo real y análisis avanzados 
+            Acceda a reportes interactivos, dashboards y análisis avanzados 
             de la gestión sanitaria de DIRIS Lima Norte.
           </p>
-        </div>
-
-        {/* Quick Stats */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
-          {quickStats.map((stat) => {
-            const IconComponent = stat.icon;
-            return (
-              <Card key={stat.title} className="p-6 bg-white border-0 shadow-lg hover:shadow-xl transition-shadow duration-300">
-                <div className="flex items-center space-x-4">
-                  <div className={`p-3 rounded-xl bg-gradient-to-br ${stat.color} shadow-md`}>
-                    <IconComponent className="h-6 w-6 text-white" />
-                  </div>
-                  <div>
-                    <p className="text-sm font-medium text-gray-600">{stat.title}</p>
-                    <p className="text-2xl font-bold text-gray-900">{stat.value}</p>
-                  </div>
-                </div>
-              </Card>
-            );
-          })}
         </div>
 
         {/* Report Categories */}
@@ -193,7 +173,7 @@ const Analytics = () => {
           <div className="bg-white/60 backdrop-blur-sm rounded-xl p-6 border-0 shadow-lg">
             <div className="flex items-center justify-center space-x-2 mb-3">
               <Activity className="h-5 w-5 text-primary" />
-              <span className="font-semibold text-primary">Sistema de Monitoreo en Tiempo Real</span>
+              <span className="font-semibold text-primary">Sistema de Seguimiento y Monitoreo</span>
             </div>
             <p className="text-muted-foreground text-sm max-w-2xl mx-auto">
               Todos los reportes se actualizan automáticamente desde nuestras bases de datos principales. 

@@ -56,11 +56,12 @@ const Contact = () => {
             <div className="space-y-6">
                 <p className="font-semibold text-primary">CONTÁCTENOS</p>
                 <h2 className="text-3xl md:text-4xl font-bold font-headline">
-                    ¿Listo para proteger a su familia?
+                    ¿Tiene alguna consulta, trámite o sugerencia? Estamos para ayudarlo.
                 </h2>
                 <p className="text-lg text-muted-foreground">
-                    Nuestro equipo de asesores está listo para ayudarlo a encontrar el plan de seguro perfecto.
-                    Póngase en contacto hoy mismo para una cotización gratuita y sin compromisos.
+                  Nuestro equipo está listo para responder cualquier duda o solicitud relacionada con seguros de salud, atención al usuario, trámites administrativos, reclamos,
+                  orientación sobre coberturas y cualquier otro tema vinculado a la DIRIS Lima Norte. 
+                  No dude en comunicarse con nosotros.
                 </p>
                 <div className="border-l-4 border-primary pl-6 space-y-3">
                     <h3 className="font-semibold text-lg">Oficina Principal</h3>
