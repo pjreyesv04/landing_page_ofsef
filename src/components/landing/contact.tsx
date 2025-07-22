@@ -30,12 +30,27 @@ const Contact = () => {
   });
 
   function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
+    // Crear el enlace mailto con los datos del formulario
+    const emailTo = "oficina.segurosdirisln@gmail.com";
+    const subject = encodeURIComponent(values.subject);
+    const body = encodeURIComponent(
+      `Nombre: ${values.name}\nEmail: ${values.email}\n\nMensaje:\n${values.message}`
+    );
+    
+    const mailtoLink = `mailto:${emailTo}?subject=${subject}&body=${body}`;
+    
+    // Abrir cliente de correo
+    window.location.href = mailtoLink;
+    
     toast({
-      title: "Mensaje Enviado",
-      description: "Gracias por contactarnos. Le responderemos a la brevedad.",
+      title: "Redirigiendo al cliente de correo",
+      description: "Se abrirá su aplicación de correo con el mensaje prellenado.",
     });
-    form.reset();
+    
+    // Limpiar formulario después de un breve delay
+    setTimeout(() => {
+      form.reset();
+    }, 1000);
   }
 
   return (
@@ -66,7 +81,7 @@ const Contact = () => {
                 <div className="border-l-4 border-primary pl-6 space-y-3">
                     <h3 className="font-semibold text-lg">Oficina Principal</h3>
                     <p className="text-muted-foreground">Calle A Mz. 02 Lt. 03 Asoc. Víctor Raúl Haya de la Torre - Distrito Independencia - Lima - Perú</p>
-                    <p className="text-muted-foreground"><strong>Email:</strong> seguros@dirislimanorte.gob.pe</p>
+                    <p className="text-muted-foreground"><strong>Email:</strong> oficina.segurosdirisln@gmail.com</p>
                     <p className="text-muted-foreground"><strong>Teléfono:</strong> (01) 521-3400</p>
                     <div className="mt-4 pt-3 border-t border-muted">
                         <h4 className="font-semibold text-base text-primary">Horarios de Atención</h4>
@@ -101,8 +116,11 @@ const Contact = () => {
                                     <FormItem><FormControl><Textarea placeholder="Su Mensaje" rows={5} {...field} /></FormControl><FormMessage /></FormItem>
                                 )} />
                                 <Button type="submit" size="lg" className="w-full bg-accent hover:bg-accent/90">
-                                    Enviar Mensaje <ArrowRight className="ml-2 h-5 w-5"/>
+                                    Enviar por Email <ArrowRight className="ml-2 h-5 w-5"/>
                                 </Button>
+                                <p className="text-xs text-muted-foreground text-center mt-2">
+                                    Al hacer clic, se abrirá su cliente de correo con el mensaje prellenado para enviar a oficina.segurosdirisln@gmail.com
+                                </p>
                             </form>
                         </Form>
                     </CardContent>
