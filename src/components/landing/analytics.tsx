@@ -4,8 +4,6 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { 
-  BarChart3, 
-  PieChart, 
   TrendingUp, 
   Users, 
   Building2, 
@@ -13,55 +11,76 @@ import {
   Activity, 
   Database,
   FileBarChart,
-  ExternalLink,
-  Download
+  ExternalLink
 } from 'lucide-react';
 import React from 'react';
 
 const reportCategories = [
   {
     title: 'Atenciones por Establecimiento',
-    description: 'Reportes detallados de atenciones médicas por cada establecimiento de salud de la red DIRIS Lima Norte.',
+    subtitle: '119 Establecimientos',
     icon: Building2,
-    type: 'power-bi',
-    status: 'Actualizado',
-    lastUpdate: 'Última actualización: Julio 2025',
-    metrics: ['119 Establecimientos', '369,327 Atenciones/mes', '2,053,046 Registros'],
+    type: 'Power BI',
+    value: '369K',
+    unit: 'atenciones/mes',
     link: '#',
-    color: 'bg-blue-500'
+    color: 'from-blue-400 to-blue-600',
+    bgColor: 'bg-blue-50'
   },
   {
     title: 'Atenciones por Profesional',
-    description: 'Análisis de productividad y atenciones realizadas por cada profesional de salud en la red.',
+    subtitle: '1,250+ Profesionales',
     icon: UserCheck,
-    type: 'database',
-    status: 'En tiempo real',
-    lastUpdate: 'Actualización automática cada hora',
-    metrics: ['1,250+ Profesionales', '295 Atenciones/día promedio', '98.5% Disponibilidad'],
+    type: 'Base de Datos',
+    value: '295',
+    unit: 'atenciones/día',
     link: '#',
-    color: 'bg-green-500'
+    color: 'from-green-400 to-green-600',
+    bgColor: 'bg-green-50'
   },
   {
-    title: 'Afiliados SIS por Distrito',
-    description: 'Distribución geográfica y demográfica de afiliados al Seguro Integral de Salud por distrito.',
+    title: 'Afiliados SIS',
+    subtitle: '7 Distritos',
     icon: Users,
-    type: 'power-bi',
-    status: 'Actualizado',
-    lastUpdate: 'Última actualización: Julio 2025',
-    metrics: ['2,053,046 Afiliados', '7 Distritos', '85% Cobertura poblacional'],
+    type: 'Power BI',
+    value: '2.05M',
+    unit: 'afiliados',
     link: '#',
-    color: 'bg-purple-500'
+    color: 'from-purple-400 to-purple-600',
+    bgColor: 'bg-purple-50'
   },
   {
-    title: 'Indicadores de Gestión',
-    description: 'Dashboard ejecutivo con KPIs principales de gestión sanitaria y administrativa.',
+    title: 'Indicadores KPI',
+    subtitle: '15 Indicadores',
     icon: TrendingUp,
-    type: 'database',
-    status: 'En tiempo real',
-    lastUpdate: 'Actualización continua',
-    metrics: ['15 KPIs principales', '92% Cumplimiento metas', '24/7 Monitoreo'],
+    type: 'Dashboard',
+    value: '92%',
+    unit: 'cumplimiento',
     link: '#',
-    color: 'bg-orange-500'
+    color: 'from-orange-400 to-orange-600',
+    bgColor: 'bg-orange-50'
+  },
+  {
+    title: 'Reportes Mensuales',
+    subtitle: 'Gestión Sanitaria',
+    icon: FileBarChart,
+    type: 'Análisis',
+    value: '24',
+    unit: 'reportes',
+    link: '#',
+    color: 'from-teal-400 to-teal-600',
+    bgColor: 'bg-teal-50'
+  },
+  {
+    title: 'Monitoreo en Tiempo Real',
+    subtitle: 'Sistema Live',
+    icon: Activity,
+    type: 'Real Time',
+    value: '24/7',
+    unit: 'monitoreo',
+    link: '#',
+    color: 'from-red-400 to-red-600',
+    bgColor: 'bg-red-50'
   }
 ];
 
@@ -70,34 +89,23 @@ const quickStats = [
     title: 'Total Registros',
     value: '2.1M+',
     icon: Database,
-    change: '+12.5%',
-    changeType: 'positive'
+    color: 'from-blue-400 to-blue-600'
   },
   {
-    title: 'Reportes Disponibles',
+    title: 'Reportes Activos',
     value: '24',
     icon: FileBarChart,
-    change: '+3',
-    changeType: 'positive'
+    color: 'from-green-400 to-green-600'
   },
   {
-    title: 'Actualización',
-    value: 'Tiempo Real',
+    title: 'Tiempo Real',
+    value: 'Live',
     icon: Activity,
-    change: 'Live',
-    changeType: 'neutral'
+    color: 'from-purple-400 to-purple-600'
   }
 ];
 
 const Analytics = () => {
-  const getTypeIcon = (type: string) => {
-    return type === 'power-bi' ? BarChart3 : PieChart;
-  };
-
-  const getTypeBadge = (type: string) => {
-    return type === 'power-bi' ? 'Power BI' : 'Base de Datos';
-  };
-
   return (
     <section id="analytics" className="py-20 bg-gradient-to-br from-slate-50 to-blue-50">
       <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -118,23 +126,14 @@ const Analytics = () => {
           {quickStats.map((stat) => {
             const IconComponent = stat.icon;
             return (
-              <Card key={stat.title} className="p-6 bg-white/70 backdrop-blur-sm border-0 shadow-lg">
-                <div className="flex items-center justify-between">
-                  <div>
-                    <p className="text-sm font-medium text-muted-foreground">{stat.title}</p>
-                    <p className="text-2xl font-bold">{stat.value}</p>
-                    <div className="flex items-center mt-1">
-                      <span className={`text-xs px-2 py-1 rounded-full ${
-                        stat.changeType === 'positive' ? 'bg-green-100 text-green-700' :
-                        stat.changeType === 'negative' ? 'bg-red-100 text-red-700' :
-                        'bg-blue-100 text-blue-700'
-                      }`}>
-                        {stat.change}
-                      </span>
-                    </div>
+              <Card key={stat.title} className="p-6 bg-white border-0 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <div className="flex items-center space-x-4">
+                  <div className={`p-3 rounded-xl bg-gradient-to-br ${stat.color} shadow-md`}>
+                    <IconComponent className="h-6 w-6 text-white" />
                   </div>
-                  <div className="bg-primary/10 p-3 rounded-full">
-                    <IconComponent className="h-6 w-6 text-primary" />
+                  <div>
+                    <p className="text-sm font-medium text-gray-600">{stat.title}</p>
+                    <p className="text-2xl font-bold text-gray-900">{stat.value}</p>
                   </div>
                 </div>
               </Card>
@@ -143,68 +142,46 @@ const Analytics = () => {
         </div>
 
         {/* Report Categories */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {reportCategories.map((category) => {
             const IconComponent = category.icon;
-            const TypeIconComponent = getTypeIcon(category.type);
             
             return (
-              <Card key={category.title} className="group hover:shadow-2xl transition-all duration-300 bg-white/80 backdrop-blur-sm border-0 overflow-hidden">
-                {/* Color Bar */}
-                <div className={`h-1 w-full ${category.color}`} />
-                
-                <CardHeader className="pb-4">
-                  <div className="flex items-start justify-between">
-                    <div className="flex items-center space-x-3">
-                      <div className={`p-3 rounded-xl ${category.color} bg-opacity-10`}>
-                        <IconComponent className="h-8 w-8 text-white" style={{filter: `drop-shadow(0 0 8px ${category.color.replace('bg-', '')})`}} />
-                      </div>
-                      <div>
-                        <CardTitle className="text-xl font-semibold">{category.title}</CardTitle>
-                        <div className="flex items-center space-x-2 mt-1">
-                          <Badge variant="secondary" className="text-xs">
-                            <TypeIconComponent className="w-3 h-3 mr-1" />
-                            {getTypeBadge(category.type)}
-                          </Badge>
-                          <Badge variant={category.status === 'En tiempo real' ? 'default' : 'outline'} className="text-xs">
-                            {category.status}
-                          </Badge>
-                        </div>
-                      </div>
+              <Card key={category.title} className={`group hover:scale-105 transition-all duration-300 ${category.bgColor} border-0 overflow-hidden cursor-pointer`}>
+                <CardContent className="p-6">
+                  <div className="flex items-center justify-between mb-4">
+                    <div className={`p-3 rounded-2xl bg-gradient-to-br ${category.color} shadow-lg`}>
+                      <IconComponent className="h-8 w-8 text-white" />
                     </div>
+                    <Badge variant="secondary" className="text-xs font-medium">
+                      {category.type}
+                    </Badge>
                   </div>
-                </CardHeader>
-
-                <CardContent className="space-y-4">
-                  <CardDescription className="text-base leading-relaxed">
-                    {category.description}
-                  </CardDescription>
-
-                  {/* Metrics */}
-                  <div className="grid grid-cols-1 gap-2">
-                    {category.metrics.map((metric, index) => (
-                      <div key={index} className="flex items-center space-x-2 text-sm">
-                        <div className="w-2 h-2 bg-primary rounded-full opacity-60" />
-                        <span className="text-muted-foreground">{metric}</span>
-                      </div>
-                    ))}
-                  </div>
-
-                  <div className="pt-2 space-y-2">
-                    <p className="text-xs text-muted-foreground">{category.lastUpdate}</p>
+                  
+                  <div className="space-y-2">
+                    <h3 className="font-bold text-lg text-gray-800 leading-tight">
+                      {category.title}
+                    </h3>
+                    <p className="text-sm text-gray-600">
+                      {category.subtitle}
+                    </p>
                     
-                    <div className="flex space-x-2">
-                      <Button asChild size="sm" className="flex-1">
-                        <a href={category.link} target="_blank" rel="noopener noreferrer">
-                          <ExternalLink className="mr-2 h-4 w-4" />
-                          Ver Reporte
-                        </a>
-                      </Button>
-                      <Button variant="outline" size="sm">
-                        <Download className="h-4 w-4" />
-                      </Button>
+                    <div className="flex items-baseline space-x-1 pt-2">
+                      <span className="text-2xl font-bold text-gray-900">
+                        {category.value}
+                      </span>
+                      <span className="text-sm text-gray-500">
+                        {category.unit}
+                      </span>
                     </div>
                   </div>
+
+                  <Button asChild size="sm" className="w-full mt-4 bg-gradient-to-r from-gray-600 to-gray-700 hover:from-gray-700 hover:to-gray-800">
+                    <a href={category.link} target="_blank" rel="noopener noreferrer">
+                      <ExternalLink className="mr-2 h-4 w-4" />
+                      Ver Reporte
+                    </a>
+                  </Button>
                 </CardContent>
               </Card>
             );
