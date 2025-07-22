@@ -43,9 +43,9 @@ const ContactInfo = () => {
               </div>
               <h3 className="font-semibold text-lg mb-3">Líneas Telefónicas</h3>
               <div className="space-y-2 text-sm text-muted-foreground">
-                <p><strong className="text-foreground">Consultas Generales:</strong><br />(01) 521-3400</p>
+                <p><strong className="text-foreground">Consultas Generales:</strong><br />(01) 2011340</p>
                 <p><strong className="text-foreground">WhatsApp:</strong><br />+51 987 654 321</p>
-                <p><strong className="text-primary">Emergencias:</strong><br />(01) 521-3401</p>
+                <p><strong className="text-primary">Información:</strong><br />(01) 2011340</p>
               </div>
             </CardContent>
           </Card>

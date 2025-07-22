@@ -82,12 +82,12 @@ const Contact = () => {
                     <h3 className="font-semibold text-lg">Oficina Principal</h3>
                     <p className="text-muted-foreground">Calle A Mz. 02 Lt. 03 Asoc. Víctor Raúl Haya de la Torre - Distrito Independencia - Lima - Perú</p>
                     <p className="text-muted-foreground"><strong>Email:</strong> oficina.segurosdirisln@gmail.com</p>
-                    <p className="text-muted-foreground"><strong>Teléfono:</strong> (01) 521-3400</p>
+                    <p className="text-muted-foreground"><strong>Teléfono:</strong> (01) 2011340</p>
                     <div className="mt-4 pt-3 border-t border-muted">
                         <h4 className="font-semibold text-base text-primary">Horarios de Atención</h4>
                         <div className="mt-2 space-y-1">
                             <p className="text-sm text-muted-foreground"><strong>Lunes a Viernes:</strong> 8:00 AM - 16:30 PM</p>
-                            <p className="text-sm text-muted-foreground"><strong>telefono:</strong>(01) 521-3401</p>
+                            <p className="text-sm text-muted-foreground"><strong>Teléfono:</strong> (01) 2011340</p>
                         
                         </div>
                     </div>

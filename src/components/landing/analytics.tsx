@@ -31,9 +31,9 @@ const reportCategories = [
     title: 'Atenciones por Profesional',
     subtitle: '1,250+ Profesionales',
     icon: UserCheck,
-    type: 'BPower BI',
-    value: '369327',
-    unit: 'atenciones/menuslaes',
+    type: 'Power BI',
+    value: '369K',
+    unit: 'atenciones/mes',
     link: 'https://app.powerbi.com/view?r=eyJrIjoiMWQyMTliY2ItMGExYS00ODU2LWI4ZmUtM2Y2NTM5MGY3M2ZhIiwidCI6IjAzZmJlMjRiLThkNzMtNDhiZC04OWE1LTYyYmQ4YzdkYmQxZiIsImMiOjR9',
     color: 'from-green-400 to-green-600',
     bgColor: 'bg-green-50'
@@ -54,9 +54,9 @@ const reportCategories = [
     subtitle: '3 Indicadores',
     icon: TrendingUp,
     type: 'Dashboard',
-    value: '92%',
+    value: '%',
     unit: 'cumplimiento',
-    link: '#',
+    link: 'https://app.powerbi.com/view?r=eyJrIjoiMGQwY2U1Y2QtMDE5My00YzYxLWJhZTEtOGMxNzkzODE3MzVmIiwidCI6IjAzZmJlMjRiLThkNzMtNDhiZC04OWE1LTYyYmQ4YzdkYmQxZiIsImMiOjR9',
     color: 'from-orange-400 to-orange-600',
     bgColor: 'bg-orange-50'
   },
@@ -72,13 +72,13 @@ const reportCategories = [
     bgColor: 'bg-teal-50'
   },
   {
-    title: 'Monitoreo en Tiempo Real',
-    subtitle: 'Sistema Live',
+    title: 'Acreditaciones SUSALUD ',
+    subtitle: 'SITEDS WEB ',
     icon: Activity,
     type: 'Real Time',
-    value: '24/7',
+    value: '100% EESS',
     unit: 'monitoreo',
-    link: '#',
+    link: 'https://bi.susalud.gob.pe/QvAJAXZfc/opendoc.htm?document=QV%20Produccion%2FSIG_SUSALUD.qvw&host=QVS%40servidor01106&anonymous=true',
     color: 'from-red-400 to-red-600',
     bgColor: 'bg-red-50'
   }

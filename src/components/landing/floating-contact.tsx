@@ -15,7 +15,7 @@ const FloatingContactButton = () => {
       label: 'Llamar',
       href: 'tel:+515213400',
       color: 'bg-blue-600 hover:bg-blue-700',
-      description: '(01) 521-3400'
+      description: '(01) 2011340'
     },
     {
       icon: MessageCircle,
