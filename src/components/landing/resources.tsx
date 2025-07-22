@@ -17,7 +17,7 @@ const documents = [
   {
     title: 'Guía de Cobertura FISSAL',
     description: 'Información detallada sobre las enfermedades de alto costo cubiertas.',
-    link: '#',
+    link: 'https://www.gob.pe/9491-que-enfermedades-tienen-cobertura-por-fissal',
   },
   {
     title: 'Modelos FUA',
