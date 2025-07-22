@@ -9,6 +9,7 @@ import FloatingContactButton from '@/components/landing/floating-contact';
 import Footer from '@/components/landing/footer';
 import Stats from '@/components/landing/stats';
 import Resources from '@/components/landing/resources';
+import Analytics from '@/components/landing/analytics';
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
         <Services />
         <Plans />
         <Resources />
+        <Analytics />
         <Announcements />
         <Contact />
       </main>
