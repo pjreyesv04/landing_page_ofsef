@@ -5,7 +5,6 @@ import Services from '@/components/landing/services';
 import Plans from '@/components/landing/plans';
 import Announcements from '@/components/landing/announcements';
 import Contact from '@/components/landing/contact';
-import ContactInfo from '@/components/landing/contact-info';
 import FloatingContactButton from '@/components/landing/floating-contact';
 import Footer from '@/components/landing/footer';
 import Stats from '@/components/landing/stats';
@@ -22,7 +21,6 @@ export default function Home() {
         <Services />
         <Plans />
         <Resources />
-        <ContactInfo />
         <Announcements />
         <Contact />
       </main>

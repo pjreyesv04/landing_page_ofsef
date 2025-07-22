@@ -1,31 +1,28 @@
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Download, FileText } from 'lucide-react';
+import React from 'react';
 
 const documents = [
   {
-    icon: <FileText className="h-8 w-8 text-primary" />,
     title: 'RJ de Afiliación',
     description: 'Documento oficial para el proceso de afiliación al SIS.',
     link: '#',
   },
   {
-    icon: <FileText className="h-8 w-8 text-primary" />,
     title: 'RJ de Sepelios',
     description: 'Formatos necesarios para la solicitud de cobertura por sepelio.',
     link: '#',
   },
   {
-    icon: <FileText className="h-8 w-8 text-primary" />,
     title: 'Guía de Cobertura FISSAL',
     description: 'Información detallada sobre las enfermedades de alto costo cubiertas.',
     link: '#',
   },
   {
-    icon: <FileText className="h-8 w-8 text-primary" />,
-    title: 'Otros Formatos',
-    description: 'Descargue otros formatos y guías relevantes para sus trámites.',
-    link: '#',
+    title: 'Modelos FUA',
+    description: 'Descargue  formatos y guías relevantes para el registro de las Atenciones.',
+    link: 'https://drive.google.com/drive/folders/1bNdVmYkfXIxSRZAQN6cIoYyEwQ9MY0L_',
   }
 ];
 
@@ -44,7 +41,7 @@ const Resources = () => {
           {documents.map((doc) => (
             <Card key={doc.title} className="flex flex-col text-center items-center p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
               <div className="bg-primary/10 p-4 rounded-full mb-4">
-                {doc.icon}
+                <FileText className="h-8 w-8 text-primary" />
               </div>
               <CardHeader className="p-0">
                 <CardTitle className="text-lg font-semibold">{doc.title}</CardTitle>
@@ -67,3 +64,5 @@ const Resources = () => {
 };
 
 export default Resources;
+
+
