@@ -3,7 +3,6 @@ import { Button } from '@/components/ui/button';
 import { CheckCircle2, ShieldCheck } from 'lucide-react';
 import Link from 'next/link';
 import { getImagePath } from '@/lib/image-paths';
-import VisitorAnalytics from '@/components/ui/visitor-analytics';
 
 const features = [
   "Gestionamos tu afiliación al Seguro Integral de Salud (SIS).",
@@ -55,23 +54,6 @@ const About = () => {
             </Button>
           </div>
         </div>
-      </div>
-    </section>
-
-    {/* Sección de Estadísticas de Visitantes */}
-    <section className="py-16 bg-gradient-to-br from-slate-50 to-blue-50">
-      <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="text-center space-y-4 mb-12">
-          <p className="font-semibold text-primary">ESTADÍSTICAS DEL SITIO WEB</p>
-          <h2 className="text-3xl md:text-4xl font-bold font-headline">
-            Transparencia en el Acceso Digital
-          </h2>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            Mantenemos un registro transparente de las visitas a nuestro portal oficial, 
-            demostrando nuestro compromiso con la accesibilidad y la transparencia en los servicios públicos.
-          </p>
-        </div>
-        <VisitorAnalytics />
       </div>
     </section>
     </>
