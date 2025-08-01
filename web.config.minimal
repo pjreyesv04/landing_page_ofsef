@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <system.webServer>
+    <!-- Configuración ultra simple sin conflictos -->
+    
+    <!-- Solo reglas de rewrite para SPA -->
+    <rewrite>
+      <rules>
+        <!-- Permitir archivos estáticos -->
+        <rule name="StaticFiles" stopProcessing="true">
+          <match url="^(.*\.(css|js|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|eot|json|xml|txt|pdf|webp))$" />
+          <action type="None" />
+        </rule>
+        
+        <!-- Permitir carpetas _next -->
+        <rule name="NextAssets" stopProcessing="true">
+          <match url="^_next/.*" />
+          <action type="None" />
+        </rule>
+        
+        <!-- Permitir carpetas images -->
+        <rule name="Images" stopProcessing="true">
+          <match url="^images/.*" />
+          <action type="None" />
+        </rule>
+        
+        <!-- Redirigir todo lo demás a index.html -->
+        <rule name="SPA" stopProcessing="true">
+          <match url=".*" />
+          <conditions logicalGrouping="MatchAll">
+            <add input="{REQUEST_FILENAME}" matchType="IsFile" negate="true" />
+            <add input="{REQUEST_FILENAME}" matchType="IsDirectory" negate="true" />
+          </conditions>
+          <action type="Rewrite" url="/index.html" />
+        </rule>
+      </rules>
+    </rewrite>
+    
+    <!-- Configurar documento por defecto -->
+    <defaultDocument>
+      <files>
+        <clear />
+        <add value="index.html" />
+      </files>
+    </defaultDocument>
+    
+  </system.webServer>
+</configuration>
