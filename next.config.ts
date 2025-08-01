@@ -1,13 +1,13 @@
 import type { NextConfig } from 'next';
 
-// Determinar el basePath según el entorno de despliegue
-// Para GitHub Pages usamos basePath, para IIS también
+// Configuración para GitHub Pages - SIN basePath duplicado
 const nextConfig: NextConfig = {
   output: 'export',
   trailingSlash: true,
-  // Configuración para GitHub Pages (por defecto)
-  basePath: '/landing_page_ofsef',
-  assetPrefix: '/landing_page_ofsef',
+  // GitHub Pages maneja automáticamente /landing_page_ofsef
+  // NO agregar basePath para evitar duplicación
+  basePath: '',
+  assetPrefix: '',
   typescript: {
     ignoreBuildErrors: true,
   },

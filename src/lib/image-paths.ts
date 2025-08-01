@@ -7,11 +7,12 @@ export function getImagePath(path: string): string {
   
   // In production, determine the correct base path
   if (process.env.NODE_ENV === 'production') {
-    // Check if we're on GitHub Pages (by checking if the current URL contains the repo name)
+    // Check if we're on GitHub Pages
     if (typeof window !== 'undefined' && window.location.hostname === 'pjreyesv04.github.io') {
-      return `/landing_page_ofsef/${cleanPath}`;
+      // GitHub Pages ya maneja /landing_page_ofsef/ automáticamente
+      return `/${cleanPath}`;
     }
-    // Otherwise assume IIS deployment
+    // For IIS deployment
     return `/diris-lima-norte/${cleanPath}`;
   }
   
