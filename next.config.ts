@@ -7,7 +7,7 @@ const nextConfig: NextConfig = {
   // GitHub Pages maneja automáticamente /landing_page_ofsef
   // NO agregar basePath para evitar duplicación
   basePath: '',
-  assetPrefix: '',
+  assetPrefix: '/landing_page_ofsef',
   typescript: {
     ignoreBuildErrors: true,
   },
