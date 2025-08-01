@@ -34,9 +34,7 @@ jobs:
         run: npm ci
         
       - name: Build Next.js for GitHub Pages
-        run: npm run build:github
-        env:
-          DEPLOY_TARGET: github
+        run: npm run build
         
       - name: List build directory
         run: |
