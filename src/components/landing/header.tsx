@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Menu, ShieldCheck, Phone, Mail, MapPin, Facebook, Twitter, Instagram } from 'lucide-react';
 import { useState } from 'react';
+import SimpleVisitorCounter from '@/components/ui/simple-visitor-counter';
 
 // --- URL CORRECTA YA APLICADA ---
 const SISTEMA_URL = 'http://simsic.dirislimanorte.gob.pe/indicadores/sistema.php'; 
@@ -41,6 +42,9 @@ const Header = () => {
               <div className="hidden md:flex items-center gap-2">
                 <MapPin className="h-3 w-3" />
                 <span>Lun-Vie: 8:00-4:30</span>
+              </div>
+              <div className="hidden lg:block">
+                <SimpleVisitorCounter />
               </div>
             </div>
             <div className="flex items-center gap-3">

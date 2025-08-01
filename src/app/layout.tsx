@@ -5,6 +5,10 @@ import { Toaster } from "@/components/ui/toaster";
 export const metadata: Metadata = {
   title: 'Oficina de Seguros | DIRIS Lima Norte',
   description: 'Oficina de Seguros de la DIRIS Lima Norte. Facilitamos el acceso al Seguro Integral de Salud (SIS) y FISSAL para la comunidad de Lima Norte.',
+  icons: {
+    icon: '/favicon.ico',
+    apple: '/apple-touch-icon.png',
+  },
 };
 
 export default function RootLayout({

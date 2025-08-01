@@ -1,5 +1,6 @@
 import { ShieldCheck, Twitter, Facebook, Instagram, Mail, MapPin, Phone } from 'lucide-react';
 import Link from 'next/link';
+import VisitorCounter from '@/components/ui/visitor-counter';
 
 const Footer = () => {
   const year = new Date().getFullYear();
@@ -67,9 +68,14 @@ const Footer = () => {
         </div>
       </div>
       <div className="bg-slate-950 py-4">
-         <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center text-sm text-slate-400">
-             © {year} Oficina de Seguros - Dirección de Redes Integradas de Salud Lima Norte. Todos los derechos reservados.
-        </div>
+         <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+             <div className="text-center md:text-left text-sm text-slate-400">
+               © {year} Oficina de Seguros - Dirección de Redes Integradas de Salud Lima Norte. Todos los derechos reservados.
+             </div>
+             <VisitorCounter />
+           </div>
+         </div>
       </div>
     </footer>
   );
