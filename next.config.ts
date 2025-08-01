@@ -1,12 +1,12 @@
 import type { NextConfig } from 'next';
 
-// Configuración para GitHub Pages - SIN basePath duplicado
+// Configuración para GitHub Pages 
 const nextConfig: NextConfig = {
   output: 'export',
   trailingSlash: true,
-  // GitHub Pages maneja automáticamente /landing_page_ofsef
-  // NO agregar basePath para evitar duplicación
-  basePath: '',
+  // GitHub Pages maneja automáticamente /landing_page_ofsef en la URL
+  // Configuramos basePath para que coincida con el repositorio
+  basePath: '/landing_page_ofsef',
   assetPrefix: '/landing_page_ofsef',
   typescript: {
     ignoreBuildErrors: true,
