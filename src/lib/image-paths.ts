@@ -7,8 +7,13 @@ export function getImagePath(path: string): string {
   
   // In production, determine the correct base path
   if (process.env.NODE_ENV === 'production') {
-    // Check if we're on GitHub Pages
-    if (typeof window !== 'undefined' && window.location.hostname === 'pjreyesv04.github.io') {
+    // Check if we're building for GitHub Pages
+    // During build time, check if this is for GitHub Pages deployment
+    const isGitHubPages = typeof window !== 'undefined' 
+      ? window.location.hostname === 'pjreyesv04.github.io'
+      : true; // Default to GitHub Pages for static build
+    
+    if (isGitHubPages) {
       // GitHub Pages ya maneja /landing_page_ofsef/ automáticamente
       return `/${cleanPath}`;
     }
