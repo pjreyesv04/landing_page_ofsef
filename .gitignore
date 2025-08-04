@@ -43,3 +43,13 @@ next-env.d.ts
 # firebase
 firebase-debug.log
 firestore-debug.log
+
+# Archivos locales del servidor IIS
+*.backup
+*.bak
+*.tmp
+deployment-iis/
+landing_page_ofsef/
+_next/_next/
+diagnostico.html
+test.html
