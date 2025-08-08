@@ -44,7 +44,8 @@ const ContactInfo = () => {
               <h3 className="font-semibold text-lg mb-3">Líneas Telefónicas</h3>
               <div className="space-y-2 text-sm text-muted-foreground">
                 <p><strong className="text-foreground">Consultas Generales:</strong><br />(01) 2011340</p>
-                <p><strong className="text-foreground">WhatsApp:</strong><br />+51 987 654 321</p>
+                {/* TEMPORALMENTE DESHABILITADO - WhatsApp */}
+                {/* <p><strong className="text-foreground">WhatsApp:</strong><br />+51 987 654 321</p> */}
                 <p><strong className="text-primary">Información:</strong><br />(01) 2011340</p>
               </div>
             </CardContent>
@@ -84,13 +85,14 @@ const ContactInfo = () => {
         {/* Botones de Acción Rápida */}
         <div className="bg-white/50 backdrop-blur-sm rounded-2xl p-8 border">
           <h3 className="text-xl font-semibold text-center mb-6">Acceso Rápido</h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            <Button asChild className="h-auto p-4 flex-col gap-2 bg-green-600 hover:bg-green-700">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {/* TEMPORALMENTE DESHABILITADO - WhatsApp */}
+            {/* <Button asChild className="h-auto p-4 flex-col gap-2 bg-green-600 hover:bg-green-700">
               <Link href="https://wa.me/51987654321" target="_blank">
                 <MessageCircle className="h-5 w-5" />
                 <span className="text-sm">WhatsApp</span>
               </Link>
-            </Button>
+            </Button> */}
             
             <Button asChild variant="outline" className="h-auto p-4 flex-col gap-2 hover:bg-primary hover:text-primary-foreground">
               <Link href="tel:+515213400">

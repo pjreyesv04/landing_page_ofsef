@@ -3,7 +3,8 @@
 
 param(
     [string]$serverPath = "C:\inetpub\wwwroot\page_ofseg_dirisln",
-    [switch]$includeTesting = $true
+    [switch]$includeTesting = $true,
+    [switch]$force = $false
 )
 
 Write-Host "=== SINCRONIZACIÓN IIS STAGING - DIRIS LIMA NORTE ===" -ForegroundColor Green
@@ -16,17 +17,32 @@ if (-not (Test-Path "package.json")) {
 }
 
 try {
-    # 1. Generar build para IIS
-    Write-Host "1. Generando build para IIS..." -ForegroundColor Cyan
-    npm run build:iis
+    # 1. Configurar next.config.ts para staging
+    Write-Host "1. Configurando para staging..." -ForegroundColor Cyan
+    
+    if (Test-Path "next.config.ts.backup") {
+        Remove-Item "next.config.ts.backup" -Force
+    }
+    
+    # Backup configuración actual
+    Copy-Item "next.config.ts" "next.config.ts.backup" -Force
+    
+    # Usar configuración específica para IIS staging
+    Copy-Item "next.config.iis.ts" "next.config.ts" -Force
+    
+    # 2. Generar build para IIS Staging
+    Write-Host "2. Generando build para IIS Staging..." -ForegroundColor Cyan
+    npm run build
     
     if ($LASTEXITCODE -ne 0) {
+        # Restaurar configuración original
+        Copy-Item "next.config.ts.backup" "next.config.ts" -Force
         Write-Error "❌ Error en build de IIS"
         exit 1
     }
 
-    # 2. Limpiar directorio staging anterior
-    Write-Host "2. Preparando directorio staging..." -ForegroundColor Cyan
+    # 3. Limpiar directorio staging anterior
+    Write-Host "3. Preparando directorio staging..." -ForegroundColor Cyan
     $stagingDir = "deployment-staging"
     
     if (Test-Path $stagingDir) {

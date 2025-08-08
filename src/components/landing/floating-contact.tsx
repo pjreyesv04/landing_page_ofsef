@@ -17,13 +17,14 @@ const FloatingContactButton = () => {
       color: 'bg-blue-600 hover:bg-blue-700',
       description: '(01) 2011340'
     },
-    {
-      icon: MessageCircle,
-      label: 'WhatsApp',
-      href: 'https://wa.me/51987654321',
-      color: 'bg-green-600 hover:bg-green-700',
-      description: 'Chat directo'
-    },
+    // TEMPORALMENTE DESHABILITADO - WhatsApp
+    // {
+    //   icon: MessageCircle,
+    //   label: 'WhatsApp',
+    //   href: 'https://wa.me/51987654321',
+    //   color: 'bg-green-600 hover:bg-green-700',
+    //   description: 'Chat directo'
+    // },
     {
       icon: Mail,
       label: 'Email',
