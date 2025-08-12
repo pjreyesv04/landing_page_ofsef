@@ -1,13 +1,12 @@
 import type { NextConfig } from 'next';
 
-// Configuración para GitHub Pages 
+// Configuración específica para IIS - DIRIS Lima Norte
 const nextConfig: NextConfig = {
   output: 'export',
   trailingSlash: true,
-  // GitHub Pages maneja automáticamente /landing_page_ofsef en la URL
-  // Configuramos basePath para que coincida con el repositorio
-  basePath: '/landing_page_ofsef',
-  assetPrefix: '/landing_page_ofsef',
+  // Configuración para el directorio virtual en IIS
+  basePath: '/page_ofseg_dirisln',
+  assetPrefix: '/page_ofseg_dirisln',
   typescript: {
     ignoreBuildErrors: true,
   },
