@@ -52,14 +52,23 @@ Write-Host "📥 Clonando repositorio desde GitHub..." -ForegroundColor Yellow
 
 # Clonar repositorio
 if (Test-Path ".git") {
-    Write-Host "✅ Repositorio ya existe - actualizando..." -ForegroundColor Green
+    Write-Host "✅ Repositorio ya existe - sincronizando con GitHub..." -ForegroundColor Green
     & git pull origin master
+    if ($LASTEXITCODE -eq 0) {
+        Write-Host "✅ Sincronización completada desde GitHub" -ForegroundColor Green
+    } else {
+        Write-Host "❌ Error sincronizando con GitHub" -ForegroundColor Red
+        Write-Host "💡 Puede que necesites configurar credenciales de Git" -ForegroundColor Yellow
+        exit 1
+    }
 } else {
+    Write-Host "📦 Clonando repositorio completo desde GitHub..." -ForegroundColor Yellow
     & git clone https://github.com/pjreyesv04/landing_page_ofsef.git .
     if ($LASTEXITCODE -eq 0) {
-        Write-Host "✅ Repositorio clonado exitosamente" -ForegroundColor Green
+        Write-Host "✅ Repositorio clonado exitosamente desde GitHub" -ForegroundColor Green
     } else {
         Write-Host "❌ Error clonando repositorio" -ForegroundColor Red
+        Write-Host "💡 Verificar conexión a internet y acceso a GitHub" -ForegroundColor Yellow
         exit 1
     }
 }
@@ -119,10 +128,14 @@ Write-Host "   npm run start   - Servidor de producción local" -ForegroundColor
 Write-Host "   npm run lint    - Verificar código" -ForegroundColor White
 Write-Host ""
 Write-Host "🔄 Flujo de desarrollo:" -ForegroundColor Cyan
-Write-Host "   1. Desarrollar localmente" -ForegroundColor White
-Write-Host "   2. git add . && git commit -m 'mensaje'" -ForegroundColor White
-Write-Host "   3. git push origin master" -ForegroundColor White
-Write-Host "   4. Usar deploy-staging.bat en servidor" -ForegroundColor White
-Write-Host "   5. Verificar en staging" -ForegroundColor White
-Write-Host "   6. Usar deploy-production.bat para producción" -ForegroundColor White
+Write-Host "   1. SIEMPRE: git pull origin master (sincronizar)" -ForegroundColor White
+Write-Host "   2. Desarrollar localmente con npm run dev" -ForegroundColor White
+Write-Host "   3. git add . && git commit -m 'mensaje'" -ForegroundColor White
+Write-Host "   4. git push origin master (subir cambios)" -ForegroundColor White
+Write-Host "   5. En servidor: deploy-staging.bat" -ForegroundColor White
+Write-Host "   6. Verificar staging" -ForegroundColor White
+Write-Host "   7. En servidor: deploy-production.bat para producción" -ForegroundColor White
+Write-Host ""
+Write-Host "⚠️  IMPORTANTE: Siempre hacer 'git pull' antes de trabajar" -ForegroundColor Red
+Write-Host "   para sincronizar con los cambios más recientes" -ForegroundColor Red
 Write-Host ""
