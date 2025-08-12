@@ -68,10 +68,10 @@ const AnimatedCounter = ({
 }
 
 const statsData = [
-  { icon: <Users className="h-10 w-10 text-accent" />, value: 2053046, label: 'Afiliados SIS' },
-  { icon: <Stethoscope className="h-10 w-10 text-accent" />, value: 369327, label: 'Atenciones Mensuales' },
-  { icon: <Hospital className="h-10 w-10 text-accent" />, value: 119, label: 'Establecimientos al Servicio' },
-  { icon: <ClipboardCheck className="h-10 w-10 text-accent" />, value: 1633, label: 'Expedientes de Sepelio Tramitados' },
+  { icon: <Users className="h-10 w-10 text-accent" />, value: 2053046, label: 'Afiliados SIS', suffix: '' },
+  { icon: <Stethoscope className="h-10 w-10 text-accent" />, value: 369327, label: 'Atenciones Mensuales', suffix: '' },
+  { icon: <Hospital className="h-10 w-10 text-accent" />, value: 119, label: 'Establecimientos al Servicio', suffix: '' },
+  { icon: <ClipboardCheck className="h-10 w-10 text-accent" />, value: 1633, label: 'Expedientes de Sepelio Tramitados', suffix: '' },
 ];
 
 const Stats = () => {
@@ -95,7 +95,7 @@ const Stats = () => {
                 <div className="bg-accent/10 p-4 rounded-full">
                     {stat.icon}
                 </div>
-                <AnimatedCounter value={stat.value} suffix={stat.suffix || ''} />
+                <AnimatedCounter value={stat.value} suffix={stat.suffix} />
                 <p className="text-muted-foreground font-medium">{stat.label}</p>
               </div>
             ))}

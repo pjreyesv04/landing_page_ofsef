@@ -53,3 +53,18 @@ landing_page_ofsef/
 _next/_next/
 diagnostico.html
 test.html
+
+# Limpieza adicional - archivos de documentación temporal
+*.md
+!README.md
+browser-test.html
+firefox-test.html
+test-utf8.html
+web.config.new
+web.config.iis
+next.config.js
+next.config.iis.ts
+clean-staging.ps1
+build.bat
+build.ps1
+/404/

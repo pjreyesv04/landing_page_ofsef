@@ -67,7 +67,7 @@ const reportCategories = [
     type: 'Análisis',
     value: '24',
     unit: 'reportes',
-    link: 'http://209.45.91.30:3000/public/dashboard/d1233b6c-d87f-477a-bd1e-c4e9ef93f315',
+    link: 'http://192.168.22.52:3000/public/dashboard/b7aba5e7-f2c7-4685-8e9f-2f0a3c7a3f81',
     color: 'from-teal-400 to-teal-600',
     bgColor: 'bg-teal-50'
   },
