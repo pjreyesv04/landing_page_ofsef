@@ -7,7 +7,7 @@ import { Menu, ShieldCheck, Phone, Mail, MapPin, Facebook, Twitter, Instagram } 
 import { useState } from 'react';
 import SimpleVisitorCounter from '@/components/ui/simple-visitor-counter';
 
-// --- URL CORRECTA YA APLICADA ---
+// --- URL LOCAL AL DIRECTORIO INDICADORES ---
 const SISTEMA_URL = 'http://simsic.dirislimanorte.gob.pe/indicadores/sistema.php'; 
 
 const navLinks = [
@@ -81,15 +81,15 @@ const Header = () => {
         </nav>
 
         <div className="flex items-center gap-4">
-            <Button asChild className="hidden lg:flex bg-accent text-accent-foreground hover:bg-accent/90 font-semibold">
-              <Link 
-                href={SISTEMA_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Acceder al Sistema
-              </Link>
-            </Button>
+              <Button className="hidden lg:flex bg-accent text-accent-foreground hover:bg-accent/90 font-semibold">
+                <a
+                  href={SISTEMA_URL}
+                  // target="_blank" // Puedes quitar target para abrir en la misma pestaña
+                  // rel="noopener noreferrer"
+                >
+                  Acceder al Sistema
+                </a>
+              </Button>
             
             <div className="lg:hidden">
             <Sheet open={isMenuOpen} onOpenChange={setMenuOpen}>
@@ -110,15 +110,15 @@ const Header = () => {
                         {link.label}
                     </Link>
                     ))}
-                    <Button asChild className="bg-accent text-accent-foreground hover:bg-accent/90 mt-4">
-                      <Link 
+                    <Button className="bg-accent text-accent-foreground hover:bg-accent/90 mt-4">
+                      <a
                         href={SISTEMA_URL}
-                        target="_blank"
-                        rel="noopener noreferrer"
+                        // target="_blank"
+                        // rel="noopener noreferrer"
                         onClick={() => setMenuOpen(false)}
                       >
                         Accede al Sistema
-                      </Link>
+                      </a>
                     </Button>
                 </div>
                 </SheetContent>
